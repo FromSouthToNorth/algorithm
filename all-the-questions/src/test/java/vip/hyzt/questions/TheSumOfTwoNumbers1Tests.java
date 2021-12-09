@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class TheSumOfTwoNumbers1Test {
+public class TheSumOfTwoNumbers1Tests {
 
     @Test
     public void violenceTest() {

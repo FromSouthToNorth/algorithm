@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class TheTwoTogether2Test {
+public class TheTwoTogether2Tests {
 
     @Test
     public void addTwoNumbersTest() {

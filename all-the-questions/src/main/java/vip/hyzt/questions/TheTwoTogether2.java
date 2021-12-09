@@ -13,7 +13,7 @@ package vip.hyzt.questions;
  * @see <a href="https://leetcode-cn.com/problems/add-two-numbers">链接：https://leetcode-cn.com/problems/add-two-numbers</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class TheTwoTogether2 {
+public abstract class TheTwoTogether2 {
 
     /**
      * 两数相加
@@ -35,7 +35,7 @@ public class TheTwoTogether2 {
         int carry = 0;
 
         // 循环链表直至没有下一个元素
-        while (l1 !=null || l2 != null) {
+        while (l1 != null || l2 != null) {
             int num1 = l1 != null ? l1.val : 0;
             int num2 = l2 != null ? l2.val : 0;
             int sum = num1 + num2 + carry;

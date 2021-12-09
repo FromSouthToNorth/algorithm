@@ -21,7 +21,7 @@ import java.util.Map;
  *
  * <p>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class TheSumOfTwoNumbers1 {
+public abstract class TheSumOfTwoNumbers1 {
 
     /**
      * 暴力解决法
