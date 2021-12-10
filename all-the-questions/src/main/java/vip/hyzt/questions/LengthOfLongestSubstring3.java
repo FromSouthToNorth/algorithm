@@ -10,6 +10,11 @@ import java.util.Map;
  * 输入: s = "abcabcbb"<br/>
  * 输出: 3<br/>
  * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。<br/>
+ * <p>示例 2:<p/>
+ * 输入: s = "bbbbb"<br>
+ * 输出: 1<br/>
+ * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。<br/>
+ * @author 力扣（LeetCode）
  * @author hy
  * @see <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a>
  */
@@ -44,7 +49,7 @@ public abstract class LengthOfLongestSubstring3 {
     }
 
     /**
-     * 用 HashMap 记录字符出现的次数优化一层循环
+     * 用 HashMap 记录字符出现的次数，优化一层循环
      * @param str - 查询的字符串
      * @return 不重复子字符串的长度
      */
@@ -71,18 +76,10 @@ public abstract class LengthOfLongestSubstring3 {
     }
 
     /**
-     * <p>利用桶替代 优化 HashMap，int[26] <p/>
-     * 用于字母， 'a' - 'z' 或者 'A' - 'Z'<br/>
+     * <p>利用桶替代 优化 HashMap<p/>
+     * int[26]用于字母， 'a' - 'z' 或者 'A' - 'Z'<br/>
      * int[128] 用于 ASCII 码<br/>
      * int[256] 用于扩展 ASCII 码<br/>
-     * <p>示例 1:<p/>
-     * 输入: s = "abcabcbb"<br/>
-     * 输出: 3<br/>
-     * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。<br/>
-     * <p>示例 2:<p/>
-     * 输入: s = "bbbbb"<br>
-     * 输出: 1<br/>
-     * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。<br/>
      * @param str - 查询的字符串
      * @return 不重复子字符串的长度
      */

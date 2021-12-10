@@ -6,7 +6,7 @@ public class LengthOfLongestSubstring3Tests {
 
     @Test
     public void slidingWindow() {
-        String str = "abcabcababcdc";
+        String str = "abcabcbb";
         System.out.println(LengthOfLongestSubstring3.slidingWindow(str));
     }
 
@@ -18,7 +18,8 @@ public class LengthOfLongestSubstring3Tests {
 
     @Test
     public void bucketDingWindow() {
-        System.out.println(LengthOfLongestSubstring3.bucketDingWindow("cccayczceabd"));
+        String str = "cccayczceabd";
+        System.out.println(LengthOfLongestSubstring3.bucketDingWindow(str));
     }
 
 }
