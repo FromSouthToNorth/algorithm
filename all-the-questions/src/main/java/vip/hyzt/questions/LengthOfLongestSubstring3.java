@@ -1,5 +1,6 @@
 package vip.hyzt.questions;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -62,6 +63,42 @@ public abstract class LengthOfLongestSubstring3 {
                 length = end - start;
             }
             hashMap.put(c, end);
+            length++;
+            result = Math.max(result, length);
+        }
+
+        return result;
+    }
+
+    /**
+     * <p>利用桶替代 优化 HashMap，int[26] <p/>
+     * 用于字母， 'a' - 'z' 或者 'A' - 'Z'<br/>
+     * int[128] 用于 ASCII 码<br/>
+     * int[256] 用于扩展 ASCII 码<br/>
+     * <p>示例 1:<p/>
+     * 输入: s = "abcabcbb"<br/>
+     * 输出: 3<br/>
+     * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。<br/>
+     * <p>示例 2:<p/>
+     * 输入: s = "bbbbb"<br>
+     * 输出: 1<br/>
+     * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。<br/>
+     * @param str - 查询的字符串
+     * @return 不重复子字符串的长度
+     */
+    public static int bucketDingWindow(String str) {
+
+        int result = 0, start = 0, end = 0, length = 0, size = str.length();
+        int[] asciiArray = new int[256];
+        Arrays.fill(asciiArray, -1);
+        while (end < size) {
+            char c = str.charAt(end);
+            if (asciiArray[c] >= start) {
+                start = asciiArray[c] + 1;
+                length = end - start;
+            }
+            asciiArray[c] = end;
+            end++;
             length++;
             result = Math.max(result, length);
         }

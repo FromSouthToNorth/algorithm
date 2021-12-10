@@ -16,4 +16,9 @@ public class LengthOfLongestSubstring3Tests {
         System.out.println(LengthOfLongestSubstring3.hashSlidingWindow(str));
     }
 
+    @Test
+    public void bucketDingWindow() {
+        System.out.println(LengthOfLongestSubstring3.bucketDingWindow("cccayczceabd"));
+    }
+
 }
