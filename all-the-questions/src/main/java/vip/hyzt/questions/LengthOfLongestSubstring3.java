@@ -33,14 +33,20 @@ public abstract class LengthOfLongestSubstring3 {
         int length = 0;
         int size = str.length();
         for (;end < size; end++) {
+            // 迭代 str 字符串当中的子字符
             char c = str.charAt(end);
+            // 模拟滑动窗口
             for (int i = start; i < end; i++) {
+                // 当字符重复出现
                 if (c == str.charAt(i)) {
+                    // 更新滑动窗口的起始下标
                     start = i + 1;
+                    // 更新不重复子字符串的长度
                     length = end - start;
                     break;
                 }
             }
+            // 当没有重复子字符，增加子字符串长度
             length++;
             result = Math.max(result, length);
         }
@@ -77,7 +83,7 @@ public abstract class LengthOfLongestSubstring3 {
 
     /**
      * <p>利用桶替代 优化 HashMap<p/>
-     * int[26]用于字母， 'a' - 'z' 或者 'A' - 'Z'<br/>
+     * int[26] 用于字母， 'a' - 'z' 或者 'A' - 'Z'<br/>
      * int[128] 用于 ASCII 码<br/>
      * int[256] 用于扩展 ASCII 码<br/>
      * @param str - 查询的字符串
