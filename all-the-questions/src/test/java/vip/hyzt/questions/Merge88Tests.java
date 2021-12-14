@@ -30,4 +30,20 @@ public class Merge88Tests {
         System.out.println(Arrays.toString(nums1));
     }
 
+    @Test
+    public void arraycopy() {
+        int[] numsOne = {1, 2, 3, 4, 0, 0, 0, 0};
+        int[] numsTwo = {5, 6, 7, 8};
+
+        // 从 numsTwo 数组中 srcPos 的起始为, 复制到 numsOne destPos 位置开始复制 几个
+        // srcPos: 0
+        //         ↓
+        //        [1, 2, 3, 4, 0, 0, 0, 0]
+        //                     ↑
+        //            destPos: 4
+        //                    [5, 6, 7, 8] length: 4
+        System.arraycopy(numsTwo, 0, numsOne, 4, numsTwo.length);
+        System.out.println(Arrays.toString(numsOne));
+    }
+
 }

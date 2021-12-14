@@ -53,8 +53,9 @@ public abstract class Merge88 {
      * @param n     需要排序的有序数组 2 长度
      */
     public static void systemArraycopySortMerge(int[] nums1, int m, int[] nums2, int n) {
-
+        // 将 nums2 数组为 0 的起始下标开始复制，到 nums1 为 m 的位置起始复制 n 个元素
         System.arraycopy(nums2, 0, nums1, m, n);
+        // 进行排序
         Arrays.sort(nums1);
     }
 
@@ -95,11 +96,38 @@ public abstract class Merge88 {
      */
     public static void doublePointerReverseOrderMerge(int[] nums1, int m, int[] nums2, int n) {
 
-        // 初始化
+        // 定义 num1 倒序迭代的指针
         int pointerOne = m - 1;
+        // 定义 num2 倒序迭代的指针
         int pointerTwo = n - 1;
+        // 定义合并后的数组的指针
         int pointer = m + n - 1;
+        // 倒序迭代 nums1, nums2 当指针为 0 终止迭代
         while ((pointerOne >= 0) && (pointerTwo >= 0)) {
+            ///////////////////////////
+            //                       7
+            //                       ↓
+            // [1, 2, 3, 4, 0, 0, 0, 0]  pointerOne = 3, pointerTwo = 3, pointer = 7, nums1[pointerOne] = 4, nums2[pointerTwo] = 7
+            //                    6
+            //                    ↓
+            // [1, 2, 3, 4, 0, 0, 0, 7]  pointerOne = 3, pointerTwo = 2, pointer = 6, nums1[pointerOne] = 4, nums2[pointerTwo] = 6
+            //                 4
+            //                 ↓
+            // [1, 2, 3, 4, 0, 0, 6, 7]  pointerOne = 3, pointerTwo = 1, pointer = 5, nums1[pointerOne] = 4, nums2[pointerTwo] = 4
+            //              4
+            //              ↓
+            // [1, 2, 3, 4, 4, 4, 6, 7]  pointerOne = 2, pointerTwo = 1, pointer = 4, nums1[pointerOne] = 3, nums2[pointerTwo] = 4
+            //           3
+            //           ↓
+            // [1, 2, 3, 3, 4, 4, 6, 7]  pointerOne = 2, pointerTwo = 0, pointer = 3, nums1[pointerOne] = 3, nums2[pointerTwo] = 2
+            //        2
+            //        ↓
+            // [1, 2, 2, 3, 4, 4, 6, 7]  pointerOne = 1, pointerTwo = 0, pointer = 2, nums1[pointerOne] = 2, nums2[pointerTwo] = 2
+            //     2
+            //     ↓
+            // [1, 2, 2, 3, 4, 4, 6, 7]  pointerOne = 0, pointerTwo = 0, pointer = 1, nums1[pointerOne] = 1, nums2[pointerTwo] = 2
+            //
+            // 合并 nums1 和 nums2, 并判断 num1[pointerOne] 小于 nums2[pointerTwo] 时 倒序插入 nums2[pointerTwo--] 否则为 nums1[pointerOne--]
             nums1[pointer--] = (nums1[pointerOne] < nums2[pointerTwo]) ? nums2[pointerTwo--] : nums1[pointerOne--];
         }
         System.arraycopy(nums2, 0, nums1, 0, pointerTwo + 1);
