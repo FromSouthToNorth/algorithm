@@ -113,7 +113,9 @@ public abstract class LengthOfLongestSubstring3 {
             char c = str.charAt(end);
             // 当子字符下标大于滑动窗口起始下标
             if (asciiArray[c] >= start) {
+                // 更新滑动窗口起始下标
                 start = asciiArray[c] + 1;
+                // 更新子字符串长度
                 length = end - start;
             }
             asciiArray[c] = end;
