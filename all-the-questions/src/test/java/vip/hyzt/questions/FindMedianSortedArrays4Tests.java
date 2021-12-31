@@ -24,8 +24,6 @@ public class FindMedianSortedArrays4Tests {
 
     @Test
     public void binarySearchTest() {
-        System.out.println(0 + (7 - 0) / 2);
-        System.out.println(0 + (2 - 0) / 2);
         int target = 8;
         int[] array = new int[]{1, 3, 4, 6, 7, 8, 10, 23};
         int size = array.length - 1;
