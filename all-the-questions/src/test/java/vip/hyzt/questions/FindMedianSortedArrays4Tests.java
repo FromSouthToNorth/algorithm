@@ -16,8 +16,8 @@ public class FindMedianSortedArrays4Tests {
 
     @Test
     public void binarySearch() {
-        int[] nums1 = {1, 3, 4, 9};
-        int[] nums2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] nums1 = {1,3};
+        int[] nums2 = {2};
         double medianSortedArrays = FindMedianSortedArrays4.findMedianSortedArrays(nums1, nums2);
         System.out.println(medianSortedArrays);
     }

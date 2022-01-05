@@ -70,11 +70,11 @@ public abstract class FindMedianSortedArrays4 {
         double median;
         if (totalLength % 2 == 1) {
             int midIndex = totalLength / 2;
-            median = binarySearch(nums1, nums2, midIndex);
+            median = binarySearch(nums1, nums2, midIndex + 1);
         }
         else {
             int midIndex1 = (totalLength / 2) - 1, midIndex2 = totalLength / 2;
-            median = (binarySearch(nums1, nums2, midIndex1 + 1) + binarySearch(nums1, nums2, midIndex2)) / 2.0;
+            median = (binarySearch(nums1, nums2, midIndex1 + 1) + binarySearch(nums1, nums2, midIndex2 + 1)) / 2.0;
         }
         return median;
     }

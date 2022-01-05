@@ -88,7 +88,7 @@ public static int hashSlidingWindow(String str) {
         // 并且该重复子字符的下标大于滑动窗口起始下标。
         if (hashMap.containsKey(c) && hashMap.get(c) >= start) {
             // 更新 滑动窗口的起始下标
-            strat =  hashMap.get(c) + 1;
+            strat = hashMap.get(c) + 1;
             // 更新 无重复子字符串长度
             length = end - start;
         }
