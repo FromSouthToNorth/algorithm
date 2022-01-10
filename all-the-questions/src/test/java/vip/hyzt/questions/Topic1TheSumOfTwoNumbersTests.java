@@ -4,13 +4,13 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class TheSumOfTwoNumbers1Tests {
+public class Topic1TheSumOfTwoNumbersTests {
 
     @Test
     public void violenceTest() {
         int[] nums = new int[] {1, 1, 6, 3, 2, 2};
         int target = 3;
-        int[] targetIndexs = TheSumOfTwoNumbers1.violence(nums, target);
+        int[] targetIndexs = Topic1TheSumOfTwoNumbers.violence(nums, target);
         System.out.println(Arrays.toString(targetIndexs));
     }
 
@@ -18,7 +18,7 @@ public class TheSumOfTwoNumbers1Tests {
     public void tableQueryTest() {
         int[] nums = new int[] {2, 1, 9, 6, 10, 2};
         int target = 11;
-        int[] ints = TheSumOfTwoNumbers1.tableQuery(nums, target);
+        int[] ints = Topic1TheSumOfTwoNumbers.tableQuery(nums, target);
         System.out.println(Arrays.toString(ints));
     }
 

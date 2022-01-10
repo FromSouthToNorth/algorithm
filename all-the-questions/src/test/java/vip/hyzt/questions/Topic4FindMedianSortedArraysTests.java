@@ -2,15 +2,13 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
-public class FindMedianSortedArrays4Tests {
+public class Topic4FindMedianSortedArraysTests {
 
     @Test
     public void findMedianSortedArrays() {
         int[] nums1 = {1, 3, 4, 7, 10};
         int[] nums2 = {2, 8, 9, 11};
-        double result = FindMedianSortedArrays4.simpleFindMedianSortedArrays(nums1, nums2);
+        double result = Topic4FindMedianSortedArrays.simpleFindMedianSortedArrays(nums1, nums2);
         System.out.println(result);
     }
 
@@ -18,7 +16,7 @@ public class FindMedianSortedArrays4Tests {
     public void binarySearch() {
         int[] nums1 = {1,3};
         int[] nums2 = {2};
-        double medianSortedArrays = FindMedianSortedArrays4.findMedianSortedArrays(nums1, nums2);
+        double medianSortedArrays = Topic4FindMedianSortedArrays.findMedianSortedArrays(nums1, nums2);
         System.out.println(medianSortedArrays);
     }
 

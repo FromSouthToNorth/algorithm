@@ -46,7 +46,7 @@ import java.util.Arrays;
  * @see <a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public abstract class FindMedianSortedArrays4 {
+public abstract class Topic4FindMedianSortedArrays {
 
     public static double simpleFindMedianSortedArrays(int[] nums1, int[] nums2) {
         int length1 = nums1.length;

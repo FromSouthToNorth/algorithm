@@ -10,6 +10,7 @@
     <modules>
         <module>all-the-questions</module>
         <module>commonmark-java</module>
+        <module>graphical-algorithm-data-structure</module>
     </modules>
 
     <properties>

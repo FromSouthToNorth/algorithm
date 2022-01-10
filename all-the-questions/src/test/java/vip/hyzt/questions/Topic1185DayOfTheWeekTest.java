@@ -2,11 +2,11 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class DayOfTheWeek1185Test {
+public class Topic1185DayOfTheWeekTest {
 
     @Test
     public void simulation() {
-        String simulation = DayOfTheWeek1185.simulation(18, 3, 1996);
+        String simulation = Topic1185DayOfTheWeek.simulation(18, 3, 1996);
         System.out.println(simulation);
     }
 

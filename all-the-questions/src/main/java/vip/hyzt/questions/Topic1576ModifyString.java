@@ -34,7 +34,7 @@ package vip.hyzt.questions;
  * @author hy
  * @see <a href="https://leetcode-cn.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters">链接：https://leetcode-cn.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters</a>
  */
-public abstract class ModifyString1576 {
+public abstract class Topic1576ModifyString {
 
     /**
      * 遍历扫描

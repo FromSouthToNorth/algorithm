@@ -41,7 +41,7 @@ import java.util.Arrays;
  * @see <a href="https://leetcode-cn.com/problems/merge-sorted-array">链接：https://leetcode-cn.com/problems/merge-sorted-array</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public abstract class Merge88 {
+public abstract class Topic88Merge {
 
     /**
      * <p>调用 Java 中 {@link System#arraycopy(Object, int, Object, int, int)} 方法 合并数组</p>

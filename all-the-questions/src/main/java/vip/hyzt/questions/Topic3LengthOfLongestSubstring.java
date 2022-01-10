@@ -18,7 +18,7 @@ import java.util.Map;
  * @author hy
  * @see <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a>
  */
-public abstract class LengthOfLongestSubstring3 {
+public abstract class Topic3LengthOfLongestSubstring {
 
     /**
      * 滑动窗口解法

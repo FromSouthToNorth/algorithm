@@ -37,7 +37,7 @@ package vip.hyzt.questions;
  * @author hy
  * @see <a href="https://leetcode-cn.com/problems/convert-1d-array-into-2d-array">链接：https://leetcode-cn.com/problems/convert-1d-array-into-2d-array</a>
  */
-public abstract class Construct2DArray2022 {
+public abstract class Topic2022Construct2DArray {
 
     /**
      * 将一维数组转变为二维数组

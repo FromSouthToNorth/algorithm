@@ -16,11 +16,11 @@ package vip.hyzt.questions;
 public abstract class TheTwoTogether2 {
 
     /**
-     * 两数相加
-     * 果声明返回结链表的头部(head)及尾部(tail) 及 进位的变量(carry)
-     * 迭代参数链表 l1, l2
-     * 取出l1,l2中的 val 数字和进位(carry)相加 sum
-     * 当第一次返回的结果链表头部为null时，将其 sum 变量存入 尾部加以存入头部
+     * <p>两数相加</p>
+     * <p>果声明返回结链表的头部(head)及尾部(tail) 及 进位的变量(carry)</p>
+     * <p>迭代参数链表 l1, l2</p>
+     * <p>取出l1,l2中的 val 数字和进位(carry)相加 sum</p>
+     * <p>当第一次返回的结果链表头部为null时，将其 sum 变量存入 尾部加以存入头部</p>
      *
      * @param l1 第一个链表 (2 -> 4 -> 3)
      * @param l2 第二个链表 (5 -> 6 -> 4)
@@ -42,8 +42,7 @@ public abstract class TheTwoTogether2 {
             // 当第一次链表头部为 null 时初始链表化头部
             if (head == null) {
                 head = tail = new ListNode(sum % 10);
-            }
-            else {
+            } else {
                 // 继续添加接下的元素
                 tail.next = new ListNode(sum % 10);
                 tail = tail.next;
@@ -63,26 +62,6 @@ public abstract class TheTwoTogether2 {
             tail.next = new ListNode(carry);
         }
         return head;
-    }
-
-}
-
-class ListNode {
-
-    int val;
-
-    ListNode next;
-
-    public ListNode() {
-    }
-
-    public ListNode(int val) {
-        this.val = val;
-    }
-
-    public ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
     }
 
 }

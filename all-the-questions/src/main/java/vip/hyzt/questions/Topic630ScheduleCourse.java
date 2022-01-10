@@ -42,7 +42,7 @@ import java.util.PriorityQueue;
  *
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public abstract class ScheduleCourse630 {
+public abstract class Topic630ScheduleCourse {
 
     public static int priorityQueueGreedy(int[][] courses) {
 

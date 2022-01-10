@@ -32,7 +32,7 @@ package vip.hyzt.questions;
  * @author hy
  * @see <a href="https://leetcode-cn.com/problems/day-of-the-week">链接：https://leetcode-cn.com/problems/day-of-the-week</a>
  */
-public abstract class DayOfTheWeek1185 {
+public abstract class Topic1185DayOfTheWeek {
 
     /**
      * 一周中的星期几
