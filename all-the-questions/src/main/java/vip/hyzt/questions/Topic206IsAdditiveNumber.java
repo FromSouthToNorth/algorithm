@@ -37,7 +37,7 @@ public abstract class Topic206IsAdditiveNumber {
                 break;
             }
             for (int secondEnd = secondStart; secondEnd < length - 1; ++secondEnd) {
-                if (num.charAt(secondEnd) == '0' && secondStart != secondEnd) {
+                if (num.charAt(secondStart) == '0' && secondStart != secondEnd) {
                     break;
                 }
                 if (valid(secondStart, secondEnd, num)) {
