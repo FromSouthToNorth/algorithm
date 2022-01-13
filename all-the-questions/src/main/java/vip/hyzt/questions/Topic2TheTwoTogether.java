@@ -13,7 +13,7 @@ package vip.hyzt.questions;
  * @see <a href="https://leetcode-cn.com/problems/add-two-numbers">链接：https://leetcode-cn.com/problems/add-two-numbers</a>
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public abstract class TheTwoTogether2 {
+public abstract class Topic2TheTwoTogether {
 
     /**
      * <p>两数相加</p>
