@@ -42,7 +42,8 @@ public abstract class Topic2TheTwoTogether {
             // 当第一次链表头部为 null 时初始链表化头部
             if (head == null) {
                 head = tail = new ListNode(sum % 10);
-            } else {
+            }
+            else {
                 // 继续添加接下的元素
                 tail.next = new ListNode(sum % 10);
                 tail = tail.next;
