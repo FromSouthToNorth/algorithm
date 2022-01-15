@@ -16,3 +16,26 @@
     }
   }
 }
+
+#toc {
+  ol {
+    padding-left: 0;
+  }
+
+  .toc-list-item {
+    list-style: none;
+
+    &.is-active-li {
+      background-color: aquamarine;
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    transition: all .6s;
+
+    &:hover {
+      color: #1e1e1e;
+    }
+  }
+}

@@ -112,7 +112,6 @@ export default {
     /* 查看图片 */
     constructorImages() {
       const images = this.$refs.article.getElementsByTagName('img');
-      console.log(images);
       for (let i = 0; i < images.length; i++) {
         images[i].addEventListener('click', e => {
           this.previewImages(e.target.currentSrc, i)
@@ -223,6 +222,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 1;
   }
   code {
     display: block;
@@ -291,11 +291,13 @@ export default {
     color: #ccc;
     background-color: #525252;
     border-radius: 4px;
-    display: none;
+    opacity: 0;
     width: 24px;
     height: 24px;
     outline: none;
     border: none;
+    cursor: pointer;
+    transition: opacity 0.6s ease-in-out 0s;
     & i {
       background: url("../../assets/svg/copy.svg") center center / cover no-repeat;
       display: inline-block;
