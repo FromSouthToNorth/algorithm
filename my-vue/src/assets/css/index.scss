@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("../font/JetBrainsMono-VariableFont_wght.ttf");
+}
+
+#app .markdown-body {
+
+  font-family: "JetBrainsMono";
+
+  & pre.hljs {
+    font-family: "JetBrainsMono";
+    background: #262626;
+
+    & code {
+      font-family: "JetBrainsMono";
+    }
+  }
+}
