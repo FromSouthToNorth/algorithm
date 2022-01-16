@@ -134,8 +134,8 @@ export default {
         font-size: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: rgba(0, 122, 255);
-        background: rgba(0, 122, 255, 0.08);
+        color: rgba(var(--dsw-blue-standard-rgb), 1);
+        background: rgba(var(--dsw-blue-0-rgba));
         height: 24px;
         line-height: 20px;
         padding: 2px 8px;
@@ -149,8 +149,8 @@ export default {
         font-size: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: rgba(45, 181, 93, 1);
-        background: rgba(45, 181, 93, 0.15);
+        color: rgba(var(--dsw-green-standard-rgb), 1);
+        background: rgba(var(--dsw-green-1-rgba));
         height: 24px;
         line-height: 20px;
         padding: 2px 8px;
@@ -168,8 +168,8 @@ export default {
         font-size: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
-        color: rgba(52,61,73,0.6);
-        background: rgba(0,10,32,0.05);
+        color: rgba(var(--dsw-label-tertiary-rgba));
+        background: rgba(var(--dsw-fill-tertiary-rgba));
         height: 24px;
         line-height: 20px;
         padding: 2px 8px;
