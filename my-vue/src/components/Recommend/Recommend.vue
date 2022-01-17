@@ -1,7 +1,6 @@
 <template>
   <div class="recommend-container">
     <recommend-header/>
-
     <recommend-scroll-container />
   </div>
 </template>

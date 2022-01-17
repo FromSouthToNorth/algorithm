@@ -1,7 +1,7 @@
 <template>
   <div class="ewpugi-container">
     <div ref="recommendScrollContainer" class="recommend-scroll-container">
-      <a v-for="index in 6" :key="index">
+      <a v-for="index in 10" :key="index">
         <div class="company-card-container">
           <img class="logo"
                src="https://images.unsplash.com/photo-1642201344145-0d49517e76e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
@@ -17,9 +17,13 @@
                       clip-rule="evenodd"></path>
               </svg>
               <span class="text">围观讨论</span>
-              <div class="avatar-container" v-for="index in 3" :key="index">
-                <img class="avatar" src="https://assets.leetcode-cn.com/aliyun-lc-upload/users/phxnirvana/avatar_1615171360.png?x-oss-process=image%2Fresize%2Ch_32%2Cw_32%2Fformat%2Cwebp" alt="">
-              </div>
+              <span class="avatar-queue-container">
+                <div class="avatar-container" v-for="index in 3" :key="index">
+                <img class="avatar"
+                     src="https://images.unsplash.com/photo-1536329583941-14287ec6fc4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+                     alt="">
+                </div>
+              </span>
             </a>
           </object>
         </div>
@@ -27,17 +31,19 @@
     </div>
     <div ref="leftMask" data-type="mask" class="left-mask" hidden></div>
     <div ref="rightMask" data-type="mask" class="right-mask"></div>
-    <div @click="action('left')" ref="actionContainerLeft" data-type="action" data-is-disabled="true" class="action-container-left">
+    <div @click="action('left')" ref="actionContainerLeft" data-type="action" data-is-disabled="true"
+         class="action-container-left">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
-           class="svg">
+           class="action-svg">
         <path fill-rule="evenodd"
               d="M14.707 16.293a1 1 0 01-1.414 1.414l-5-5a1 1 0 010-1.414l5-5a1 1 0 111.414 1.414L10.414 12l4.293 4.293z"
               clip-rule="evenodd"></path>
       </svg>
     </div>
-    <div @click="action('right')" ref="actionContainerRight" data-type="action" data-is-disabled="false" class="action-container-right">
+    <div @click="action('right')" ref="actionContainerRight" data-type="action" data-is-disabled="false"
+         class="action-container-right">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"
-           class="svg">
+           class="action-svg">
         <path fill-rule="evenodd"
               d="M9.293 7.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414-1.414L13.586 12 9.293 7.707z"
               clip-rule="evenodd"></path>
@@ -70,17 +76,66 @@ export default {
     return {
       maxClickNum: 0,
       lastLeft: 0,
-      clickNum: 0
+      clickNum: 0,
+      currentClickNum: 1,
     }
+  },
+  mounted() {
+    this.leftFun()
+  },
+  beforeDestroy() {
+    document.removeEventListener('scroll', this.leftFun)
   },
   methods: {
     action(direction) {
-      const nodes = this.$refs.recommendScrollContainer.children;
-      let scrollWidth = this.$refs.recommendScrollContainer.scrollWidth;
-      this.$refs.recommendScrollContainer.scrollLeft = scrollWidth / nodes.length
-      console.log(this.$refs.recommendScrollContainer.scrollWidth / nodes.length);
-      console.log(document.querySelector('.recommend-scroll-container'));
-      console.log(this.$refs.recommendScrollContainer.scrollWidth);
+      this.$nextTick(() => {
+        const nodes = this.$refs.recommendScrollContainer.children
+        const length = nodes.length
+        let intLength = parseInt(length / 4)
+        this.clickNum = length % 4 === 0 ? intLength : intLength + 1
+        let number = nodes[0].clientWidth * 4;
+        if (direction === 'right') {
+          this.$refs.recommendScrollContainer.scrollLeft += number
+          this.currentClickNum++
+        }
+        else {
+          this.$refs.recommendScrollContainer.scrollLeft -= number
+          this.currentClickNum--
+        }
+      })
+    },
+    leftFun(e) {
+      document.addEventListener('scroll', this.leftScroll, true)
+    },
+    leftScroll(e) {
+      const recommendScrollContainer = this.$refs.recommendScrollContainer
+      let children = recommendScrollContainer.children
+      let scrollWidth = recommendScrollContainer.scrollWidth
+      scrollWidth = Math.floor(scrollWidth / children.length) * (children.length % 4)
+      let actionContainerRight = this.$refs.actionContainerRight
+      let actionContainerLeft = this.$refs.actionContainerLeft
+      let leftMask  = document.querySelector('.left-mask')
+      let rightMask = document.querySelector('.right-mask')
+      this.lastLeft = this.$refs.recommendScrollContainer.scrollLeft || e.target.scrollLeft
+      if (this.clickNum === this.currentClickNum) {
+        actionContainerRight.dataset.isDisabled = true
+        leftMask.removeAttribute('hidden')
+        rightMask.setAttribute('hidden', 'hidden')
+      }
+      if (this.lastLeft > 0) {
+        actionContainerLeft.dataset.isDisabled = false
+        if (this.clickNum > this.currentClickNum) {
+          actionContainerRight.dataset.isDisabled = false
+          leftMask.removeAttribute('hidden')
+          rightMask.removeAttribute('hidden')
+        }
+      }
+      else {
+        actionContainerRight.dataset.isDisabled = false
+        actionContainerLeft.dataset.isDisabled = true
+        leftMask.setAttribute('hidden', 'hidden')
+        rightMask.removeAttribute('hidden')
+      }
     }
   }
 }
@@ -91,6 +146,10 @@ export default {
   width: 100%;
   position: relative;
   z-index: 0;
+
+  .recommend-scroll-container {
+    scroll-behavior: smooth;
+  }
 
   .recommend-scroll-container ~ div[class*="left-mask"] {
     left: -14px;
@@ -170,7 +229,7 @@ export default {
     pointer-events: auto;
   }
 
-  .svg {
+  .action-svg {
     width: 24px;
     height: 24px;
   }
@@ -224,6 +283,7 @@ export default {
     animation-name: erd_scroll_detection_container_animation;
   }
 }
+
 .recommend-scroll-container {
   overflow: auto hidden;
   white-space: nowrap;
@@ -292,6 +352,7 @@ export default {
         &:hover {
           background: rgba(var(--dsw-blue-2-rgba));
         }
+
         font-size: 12px;
         line-height: 18px;
         width: 136px;
@@ -316,14 +377,20 @@ export default {
           margin-right: 8px;
         }
 
-        .avatar-container {
-          width: 16px;
+        .avatar-queue-container {
+          font-size: 0;
+          display: flex;
+          flex-direction: row-reverse;
 
-          .avatar {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            border: 1px solid transparent;
+          .avatar-container {
+            width: 12px;
+
+            .avatar {
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              border: 1px solid transparent;
+            }
           }
         }
       }
