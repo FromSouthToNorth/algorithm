@@ -19,7 +19,7 @@
 #### 第一次 while迭代
 - start(0) <= end(7) 为 false 进入 `while` 迭代;
 - 中位下标为 start(0) + (7 - 0) / 2。**向下取整 middle 为 3**;
-~~~
+~~~markdown
 此时 middle(3) 指向数组元素当中的 6。 因此 middleNum = 6
  [1, 3, 4, 6, 7, 8, 10, 23]
   ↑        ↑             ↑
@@ -33,7 +33,7 @@ end(2) = middle(3) - 1
 #### 第二次 while 迭代
 - start(0) <= end(2) 为 false 进入 `while` 迭代;
 - 中位数下标为 start(0) + (2 - 0) / 2。**middle 为 1**;
-~~~
+~~~markdown
 [1,        3,        4]
  ↑         ↑         ↑
 start(0) middle(1)  end(2)
