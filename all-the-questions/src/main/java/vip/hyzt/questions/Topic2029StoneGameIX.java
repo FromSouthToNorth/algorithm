@@ -1,6 +1,6 @@
 package vip.hyzt.questions;
 
-构造/**
+/**
  * <h3>2029. 石子游戏 IX</h3>
  * <p>Alice 和 Bob 再次设计了一款新的石子游戏。现有一行 n 个石子，每个石子都有一个关联的数字表示它的价值。给你一个整数数组 stones ，其中 stones[i] 是第 i 个石子的价值。</p>
  *
