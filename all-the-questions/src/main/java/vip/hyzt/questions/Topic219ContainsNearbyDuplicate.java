@@ -30,7 +30,6 @@ import java.util.Map;
  */
 public abstract class Topic219ContainsNearbyDuplicate {
 
-
     public static boolean hash(int[] nums, int k) {
         int length = nums.length;
         Map<Integer, Integer> hashMap = new HashMap<>(length - 1);
