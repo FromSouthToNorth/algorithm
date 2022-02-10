@@ -68,7 +68,7 @@ end 指针指向右侧伸缩 {
 ### 用 HashMap 记录字符出现的次数，优化一层循环
 
 #### 实例代码
-~~~
+~~~java
 public static int hashSlidingWindow(String str) {
     int result = 0;
     int length = 0;
@@ -105,7 +105,7 @@ public static int hashSlidingWindow(String str) {
 
 #### 示例代码
 
-~~~
+~~~java
 /**
  * <p>利用桶替代 HashMap<p/>
  * @param str - 查询的字符串
