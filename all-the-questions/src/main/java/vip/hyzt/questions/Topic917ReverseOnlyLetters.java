@@ -41,7 +41,29 @@ package vip.hyzt.questions;
 public abstract class Topic917ReverseOnlyLetters {
 
     /**
-     * 反转字符串中大小写字母的位置
+     * <p>反转字符串中大小写字母的位置</p>
+     * s = "1ab-2cd"
+     * chars = ['1', 'a', 'b', '-', '2', 'c', 'd']
+     * chars.length = 7 - 1
+     * left = 0
+     * right = 6
+     * ['1', 'a', 'b', '-', '2', 'c', 'd']
+     *   ↑                             ↑
+     *  left++                      right--
+     *
+     * left = 1
+     * right = 5
+     * ['1', 'd', 'b', '-', '2', 'c', 'a']
+     *        ↑                   ↑
+     *      left++             right--
+     *
+     * left = 2
+     * right = 5
+     * ['1', 'd', 'c', '-', '2', 'b', 'a']
+     *             ↑              ↑
+     *           left++        right--
+     *
+     * return "1dc-2ba"
      * @param s 需要反转的字符串
      * @return 反转后的字符串
      */
