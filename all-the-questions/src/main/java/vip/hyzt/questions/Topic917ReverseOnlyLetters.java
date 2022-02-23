@@ -58,11 +58,16 @@ public abstract class Topic917ReverseOnlyLetters {
      *      left++             right--
      *
      * left = 2
-     * right = 5
+     * right = 4
      * ['1', 'd', 'c', '-', '2', 'b', 'a']
-     *             ↑              ↑
-     *           left++        right--
+     *             ↑         ↑
+     *           left++   right--
      *
+     * left = 3
+     * right = 3
+     * ['1', 'd', 'c', '-', '2', 'b', 'a']
+     *                  ↑
+     *           left++ && right--
      * return "1dc-2ba"
      * @param s 需要反转的字符串
      * @return 反转后的字符串
