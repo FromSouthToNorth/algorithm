@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.binarySearch;
 
 /**
  * <p>二分查找</p>

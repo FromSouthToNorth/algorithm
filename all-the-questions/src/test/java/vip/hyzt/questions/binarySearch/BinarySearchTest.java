@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.binarySearch;
 
 import org.junit.Test;
 
