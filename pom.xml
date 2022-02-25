@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>all-the-questions</module>
-        <module>commonmark-java</module>
-        <module>graphical-algorithm-data-structure</module>
+        <module>algorithms-fourth-edition</module>
+        <module>algorithm-common</module>
     </modules>
 
     <properties>
