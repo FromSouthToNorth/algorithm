@@ -10,7 +10,6 @@
     <modules>
         <module>all-the-questions</module>
         <module>algorithms-fourth-edition</module>
-        <module>algorithm-common</module>
     </modules>
 
     <properties>
