@@ -5,7 +5,7 @@ import vip.hyzt.questions.doublePointer.SortedSquares;
 
 import java.util.Arrays;
 
-public class SortedSquaresTest {
+public class SortedSquaresTests {
 
     @Test
     public void sortedSquares() {
