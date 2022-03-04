@@ -35,7 +35,6 @@ import java.util.Set;
  */
 public abstract class Topic564NearestPalindromic {
 
-
     public static String nearestPalindromic(String s) {
         int n = s.length();
         long cur = Long.parseLong(s);
