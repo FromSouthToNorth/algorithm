@@ -21,6 +21,9 @@ public class Topic504ConvertToBase7 {
 
     public static String convertToBase2(int num) {
         boolean flag = num < 0;
+        if (flag) {
+            num = -num;
+        }
         StringBuilder sb = new StringBuilder();
         do {
             sb.append(num % 2);
@@ -32,6 +35,9 @@ public class Topic504ConvertToBase7 {
 
     public static String convertToBase7(int num) {
         boolean flag = num < 0;
+        if (flag) {
+            num = -num;
+        }
         StringBuilder sb = new StringBuilder();
         do {
             sb.append(num % 7);
