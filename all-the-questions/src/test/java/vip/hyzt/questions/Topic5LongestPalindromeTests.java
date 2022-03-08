@@ -6,7 +6,7 @@ public class Topic5LongestPalindromeTests {
 
     @Test
     public void longestPalindrome() {
-        String s = "cbbd";
+        String s = "babad";
         String ans = Topic5LongestPalindrome.longestPalindrome(s);
         System.out.println(ans);
     }
