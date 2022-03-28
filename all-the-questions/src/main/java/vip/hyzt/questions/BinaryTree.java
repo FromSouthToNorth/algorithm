@@ -2,8 +2,7 @@ package vip.hyzt.questions;
 
 import com.sun.source.tree.Tree;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * <h3>二叉树遍历</h3>
@@ -65,6 +64,31 @@ public abstract class BinaryTree {
             }
             node = stack.pop();
             node = node.right;
+        }
+    }
+
+    /**
+     * 广度优先搜索
+     */
+    public static void bfsTree(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+
+        Deque<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int currentLevelSize = queue.size();
+            for (int i = 1; i <= currentLevelSize; ++i) {
+                TreeNode node = queue.poll();
+                System.out.print(node.val + "\t");
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
         }
     }
 
