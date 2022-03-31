@@ -68,28 +68,54 @@ public abstract class BinaryTree {
     }
 
     /**
-     * 广度优先搜索
+     * 后序迭代
      */
-    public static void bfsTree(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-
-        Deque<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            int currentLevelSize = queue.size();
-            for (int i = 1; i <= currentLevelSize; ++i) {
-                TreeNode node = queue.poll();
-                System.out.print(node.val + "\t");
-                if (node.left != null) {
-                    queue.offer(node.left);
-                }
-                if (node.right != null) {
-                    queue.offer(node.right);
-                }
+    public static List<Integer> postorderDequeTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode prev = null;
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+            root = stack.pop();
+            if (root.right == null || prev == root.right) {
+                res.add(root.val);
+                prev = root;
+                root = null;
+            }
+            else {
+                stack.push(root);
+                root = root.right;
             }
         }
+        return res;
+    }
+
+    /**
+     * 广度优先搜索
+     */
+    public static List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) {
+            return res;
+        }
+        Queue<TreeNode> stack = new LinkedList<>();
+        stack.offer(root);
+        while (!stack.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
+            int n = stack.size();
+            for (int i = 0; i < n; i++) {
+                TreeNode node = stack.poll();
+                level.add(node.val);
+                if (node.left != null) stack.offer(node.left);
+                if (node.right != null) stack.offer(node.right);
+            }
+            res.add(level);
+        }
+        return res;
     }
 
 }
