@@ -10,6 +10,7 @@
     <modules>
         <module>all-the-questions</module>
         <module>algorithms-fourth-edition</module>
+        <module>datastructures</module>
     </modules>
 
     <properties>
