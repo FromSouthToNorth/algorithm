@@ -11,6 +11,7 @@
         <module>all-the-questions</module>
         <module>algorithms-fourth-edition</module>
         <module>datastructures</module>
+        <module>bit-arithmetic</module>
     </modules>
 
     <properties>
