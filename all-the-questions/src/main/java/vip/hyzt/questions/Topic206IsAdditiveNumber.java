@@ -26,7 +26,7 @@ package vip.hyzt.questions;
  * </ul>
  * @author 力扣（LeetCode）
  * @author hy
- *  <a href="https://leetcode-cn.com/problems/additive-number">链接：https://leetcode-cn.com/problems/additive-number</a>
+ * @see <a href="https://leetcode-cn.com/problems/additive-number">链接：https://leetcode-cn.com/problems/additive-number</a>
  */
 public abstract class Topic206IsAdditiveNumber {
 
