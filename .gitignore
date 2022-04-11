@@ -6,6 +6,7 @@ out
 test-output
 atlassian-ide-plugin.xml
 .gradletasknamecache
+**.DS_Store
 
 target/
 .vscoed/
