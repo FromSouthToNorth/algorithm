@@ -8,6 +8,7 @@ import java.util.List;
  * <p>给你一个整数 n ，按字典序返回范围 [1, n] 内所有整数。</p>
  * <p>你必须设计一个时间复杂度为 O(n) 且使用 O(1) 额外空间的算法。</p>
  * <p><b>示例 1：</b></p>
+ * <img src="../../../../../../../img/topic386lexicalOrder/topic386lexicalOrder.png" >
  * <pre>
  *     <strong>输入：</strong>n = 13
  *     <strong>输出：</strong>[1,10,11,12,13,2,3,4,5,6,7,8,9]
@@ -27,7 +28,9 @@ public class Topic386LexicalOrder {
 
     static List<Integer> ANS = new ArrayList<>();
 
-
+    /**
+     * <p>递归</p>
+     */
     public static List<Integer> lexicalOrder(int n) {
         for (int i = 1; i <= 9; i++)  dfs(i, n);
         return ANS;
@@ -39,8 +42,12 @@ public class Topic386LexicalOrder {
         for (int i = 0; i <= 9; i++) dfs(cur * 10 + i, limit);
     }
 
+    /**
+     * <p>迭代</p>
+     */
     public static List<Integer> lexicalOrder2(int n) {
         List<Integer> ans = new ArrayList<>();
+        // 变量 j 为记录 i 的广度 1 > 10,11,12,13
         for (int i = 0, j = 1; i < n; i++) {
             ans.add(j);
             if (j * 10 <= n) {
