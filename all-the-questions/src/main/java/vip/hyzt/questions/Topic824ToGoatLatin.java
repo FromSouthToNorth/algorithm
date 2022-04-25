@@ -36,8 +36,9 @@ package vip.hyzt.questions;
  * <li>sentence 由英文字母和空格组成</li>
  * <li>sentence 不含前导或尾随空格</li>
  * <li>sentence 中的所有单词由单个空格分隔</li>
- * @author 力扣（LeetCode）
  * @see <a href="https://leetcode-cn.com/problems/goat-latin">链接：https://leetcode-cn.com/problems/goat-latin</a>
+ * @author 力扣（LeetCode）
+ * @author hy
  */
 public class Topic824ToGoatLatin {
 
