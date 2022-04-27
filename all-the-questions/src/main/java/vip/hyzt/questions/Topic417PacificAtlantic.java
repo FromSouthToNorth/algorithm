@@ -47,7 +47,7 @@ public class Topic417PacificAtlantic {
                     if (!res1[i][j]) dfs(i, j, res1);
                 }
                 if (i == m - 1 || j == n - 1) {
-                    if(!res2[i][j]) dfs(i, j, res2);
+                    if (!res2[i][j]) dfs(i, j, res2);
                 }
             }
         }
