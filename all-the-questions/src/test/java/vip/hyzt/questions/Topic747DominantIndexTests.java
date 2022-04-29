@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic747DominantIndexTest {
+public class Topic747DominantIndexTests {
 
     @Test
     public void dominantIndex() {

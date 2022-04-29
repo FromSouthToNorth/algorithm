@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic334IncreasingTripletTest {
+public class Topic334IncreasingTripletTests {
 
     @Test
     public void twoWayTraversal() {

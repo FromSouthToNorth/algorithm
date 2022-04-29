@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic206IsAdditiveNumberTest {
+public class Topic206IsAdditiveNumberTests {
 
     @Test
     public void isAdditiveNumber() {

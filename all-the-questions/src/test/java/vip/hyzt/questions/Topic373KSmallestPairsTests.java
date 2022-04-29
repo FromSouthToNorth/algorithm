@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class Topic373KSmallestPairsTest {
+public class Topic373KSmallestPairsTests {
 
     @Test
     public void priorityQueue() {

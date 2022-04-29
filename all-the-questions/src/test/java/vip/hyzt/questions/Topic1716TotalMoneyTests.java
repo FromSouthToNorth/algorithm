@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic1716TotalMoneyTest {
+public class Topic1716TotalMoneyTests {
 
     @Test
     public void bruteForceComputing() {

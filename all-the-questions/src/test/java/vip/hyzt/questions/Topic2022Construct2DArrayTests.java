@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-public class Topic2022Construct2DArrayTest {
+public class Topic2022Construct2DArrayTests {
 
     @Test
     public void simulation() {

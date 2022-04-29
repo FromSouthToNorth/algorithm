@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic1576ModifyStringTest {
+public class Topic1576ModifyStringTests {
 
     @Test
     public void traversalScan() {

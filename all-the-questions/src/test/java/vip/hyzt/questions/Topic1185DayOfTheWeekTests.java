@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic1185DayOfTheWeekTest {
+public class Topic1185DayOfTheWeekTests {
 
     @Test
     public void simulation() {

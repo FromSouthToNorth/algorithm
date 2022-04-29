@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic67AddBinaryTest {
+public class Topic67AddBinaryTests {
 
     @Test
     public void addBinary() {

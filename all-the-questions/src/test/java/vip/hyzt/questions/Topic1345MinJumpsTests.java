@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class Topic1345MinJumpsTest {
+public class Topic1345MinJumpsTests {
 
     @Test
     public void minJumps() {
