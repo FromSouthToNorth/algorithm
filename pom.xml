@@ -13,6 +13,7 @@
         <module>datastructures</module>
         <module>bit-arithmetic</module>
         <module>the-sorting</module>
+        <module>math</module>
     </modules>
 
     <properties>
