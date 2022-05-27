@@ -35,7 +35,7 @@ public class Read {
      */
     private static final Pattern EVERYTHING_PATTERN = Pattern.compile("\\A");
 
-    private Scanner scanner;
+    private final Scanner scanner;
 
     private String name;
 
@@ -107,9 +107,7 @@ public class Read {
             return tokens;
         }
         String[] decapitokens = new String[tokens.length - 1];
-        for (int i = 0; i < tokens.length - 1; i++) {
-            decapitokens[i] = tokens[i+1];
-        }
+        System.arraycopy(tokens, 1, decapitokens, 0, tokens.length - 1);
         return decapitokens;
     }
 
