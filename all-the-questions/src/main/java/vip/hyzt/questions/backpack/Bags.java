@@ -1,7 +1,5 @@
 package vip.hyzt.questions.backpack;
 
-import java.util.Arrays;
-
 /**
  * 0-1背包问题母代码(二维)
  *
