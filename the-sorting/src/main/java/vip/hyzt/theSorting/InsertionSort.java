@@ -6,7 +6,6 @@ package vip.hyzt.theSorting;
  */
 public class InsertionSort {
 
-
     public static int[] sortArray(int[] nums) {
         int n = nums.length - 1;
         for (int i = 0; i < n; i++) {

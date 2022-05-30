@@ -14,6 +14,7 @@
         <module>bit-arithmetic</module>
         <module>the-sorting</module>
         <module>math</module>
+        <module>io</module>
     </modules>
 
     <properties>
