@@ -151,6 +151,8 @@ public static void createDirectory() {
 
 ### OutputStream
 
+![OutputStream.png](../../../../resources/diagrams/OutputStream.png)
+
 ## 字符流
 
 ### Reader
