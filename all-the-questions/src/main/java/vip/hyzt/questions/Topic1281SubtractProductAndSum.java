@@ -30,12 +30,11 @@ package vip.hyzt.questions;
 public class Topic1281SubtractProductAndSum {
 
     public static int subtractProductAndSum(int n) {
-        int p = 1;
-        int sum = 0;
-        while (n != 0) {
-            p *= n % 10;
-            sum += n % 10;
-            n /= 10;
+        int p = 1, sum = 0;
+        for (; n > 0; n /= 10) {
+            int d = n % 10;
+            sum += d;
+            p *= d;
         }
         return p - sum;
     }

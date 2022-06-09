@@ -34,7 +34,15 @@ public class Topic1295FindNumbers {
     public static int findNumbers(int[] nums) {
         int ans = 0;
         for (int num : nums) {
-            if (String.valueOf(num).length() % 2 == 0) ans++;
+//            if (String.valueOf(num).length() % 2 == 0) ans++;
+            int count = 1;
+            while (num / 10 != 0) {
+                num /= 10;
+                count++;
+            }
+            if (count % 2 == 0) {
+                ans++;
+            }
         }
         return ans;
     }
