@@ -33,24 +33,22 @@ public class Topic1913MaxProductDifference {
 
     public static int maxProductDifference(int[] nums) {
         int ans = 0;
-        aux = new int[nums.length];
         sort(nums,0, nums.length - 1);
         System.out.println(Arrays.toString(nums));
         ans = (nums[nums.length - 1]) * (nums[nums.length - 2]) - (nums[1] * nums[0]);
         return ans;
     }
 
-    static int[] aux;
-
     static void sort(int[] nums, int lo, int hi) {
+        int[] aux = new int[nums.length];
         if (hi <= lo) return;
         int mid = lo + (hi - lo) / 2 ;
         sort(nums, lo, mid);
         sort(nums, mid + 1, hi);
-        merge(nums, lo, mid, hi);
+        merge(nums, aux, lo, mid, hi);
     }
 
-    static void merge(int[] nums, int lo, int mid, int hi) {
+    static void merge(int[] nums, int[] aux, int lo, int mid, int hi) {
         int i = lo, j = mid + 1;
 
         if (hi + 1 - lo >= 0) {
