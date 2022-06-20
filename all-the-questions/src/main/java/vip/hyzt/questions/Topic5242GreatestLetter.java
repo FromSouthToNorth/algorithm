@@ -41,7 +41,22 @@ import java.util.Set;
  */
 public class Topic5242GreatestLetter {
 
-    public static String greatestLetter(String s) {
+    public static String greatestLetter1(String s) {
+        Map<Character, Integer> map = new HashMap<>();
+        char[] chars = s.toCharArray();
+        int ans = 0;
+        for (char c : chars) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+            if (entry.getValue() > 0 && map.containsKey((char) ((int) entry.getKey() + 32))) {
+                ans = Math.max((int) entry.getKey(), ans);
+            }
+        }
+        return ans == 0 ? "" : String.valueOf((char) ans);
+    }
+
+    public static String greatestLetter2(String s) {
         // 记录出现过的字母
         long mask = 0;
         int n = s.length();
@@ -54,6 +69,16 @@ public class Topic5242GreatestLetter {
             // 同时出现 大小写 字母
             if (((mask >> i & 1) == 1) && ((mask >> (i + 32) & 1) == 1)) {
                 return (char) ('A' + i) + "";
+            }
+        }
+        return "";
+    }
+
+    public static String greatestLetter3(String s) {
+        // 记录出现过的字母
+        for (char c = 'Z'; c >= 'A'; c--) {
+            if (s.indexOf(c) >= 0 && s.indexOf(c - 'a' + 'A') >= 0) {
+                return c+"";
             }
         }
         return "";
