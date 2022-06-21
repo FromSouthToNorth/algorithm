@@ -1,5 +1,8 @@
 package vip.hyzt.questions;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * <h3>715. Range 模块</h3>
  * <p>Range模块是跟踪数字范围的模块。设计一个数据结构来跟踪表示为 半开区间 的范围并查询它们。</p>
@@ -36,71 +39,73 @@ package vip.hyzt.questions;
  */
 public class Topic715RangeModule {
 
-    class Node {
-        int ls, rs ,sum, add;
-    }
-    int N = (int) 1e9 + 10, M = 500010, cnt = 1;
-    Node[] tr = new Node[M];
+    TreeMap<Integer, Integer> intervals;
 
-    void update(int u, int lc, int rc, int l, int r, int v) {
-        int len = rc - lc + 1;
-        if (l <= lc && rc <= r) {
-            tr[u].sum = v == 1 ? len : 0;
-            tr[u].add = v;
-            return;
-        }
-        pushdown(u, len);
-        int mid = lc + rc >> 1;
-        if (l <= mid) update(tr[u].ls, lc, mid, l, r, v);
-        if (r > mid) update(tr[u].rs, mid + 1, rc, l, r, v);
-        pushup(u);
-    }
-
-    int query(int u, int lc, int rc, int l, int r) {
-        if (l <= lc && rc <= r) return tr[u].sum;
-        pushdown(u, rc - lc + 1);
-        int mid = lc + rc >> 1, ans = 0;
-        if (l <= mid) ans = query(tr[u].ls, lc, mid, l, r);
-        if (r > mid) ans += query(tr[u].rs, mid + 1, rc, l, r);
-        return ans;
-    }
-
-    void pushdown(int u, int len) {
-        if (tr[u] == null) tr[u] = new Node();
-        if (tr[u].ls == 0) {
-            tr[u].ls = ++cnt;
-            tr[tr[u].ls] = new Node();
-        }
-        if (tr[u].rs == 0) {
-            tr[u].rs = ++cnt;
-            tr[tr[u].rs] = new Node();
-        }
-        if (tr[u].add == 0) return;
-        if (tr[u].add == -1) {
-            tr[tr[u].ls].sum = tr[tr[u].rs].sum = 0;
-        }
-        else {
-            tr[tr[u].ls].sum = len - len / 2;
-            tr[tr[u].rs].sum = len / 2;
-        }
-        tr[tr[u].ls].add = tr[tr[u].rs].add = tr[u].add;
-        tr[u].add = 0;
-    }
-
-    void pushup(int u) {
-        tr[u].sum = tr[tr[u].ls].sum + tr[tr[u].rs].sum;
+    public Topic715RangeModule() {
+        intervals = new TreeMap<>();
     }
 
     public void addRange(int left, int right) {
-        update(1, 1, N - 1, left, right - 1, 1);
+        Map.Entry<Integer, Integer> entry = intervals.higherEntry(left);
+        if (entry != intervals.firstEntry()) {
+            Map.Entry<Integer, Integer> start = entry != null ? intervals.lowerEntry(entry.getKey())
+                    : intervals.lastEntry();
+            if (start != null && start.getValue() >= right) {
+                return;
+            }
+            if (start != null && start.getValue() >= left) {
+                left = start.getKey();
+                intervals.remove(start.getKey());
+            }
+        }
+        while (entry != null && entry.getKey() <= right) {
+            right = Math.max(right, entry.getValue());
+            intervals.remove(entry.getKey());
+            entry = intervals.higherEntry(entry.getKey());
+        }
+        intervals.put(left, right);
     }
 
     public boolean queryRange(int left, int right) {
-        return query(1, 1, N - 1, left, right - 1) == right - left;
+        Map.Entry<Integer, Integer> entry = intervals.higherEntry(left);
+        if (entry == intervals.firstEntry()) {
+            return false;
+        }
+        entry = entry != null ? intervals.lowerEntry(entry.getKey()) : intervals.lastEntry();
+        return entry != null && right <= entry.getValue();
     }
 
     public void removeRange(int left, int right) {
-        update(1, 1, N - 1, left, right - 1, -1);
+        Map.Entry<Integer, Integer> entry = intervals.higherEntry(left);
+        if (entry != intervals.firstEntry()) {
+            Map.Entry<Integer, Integer> start = entry != null ? intervals.lowerEntry(entry.getKey())
+                    : intervals.lastEntry();
+            if (start != null && start.getValue() >= right) {
+                int ri = start.getValue();
+                if (start.getKey() == left) {
+                    intervals.remove(start.getKey());
+                } else {
+                    intervals.put(start.getKey(), left);
+                }
+                if (right != ri) {
+                    intervals.put(right, ri);
+                }
+                return;
+            }
+            else if (start != null && start.getValue() > left) {
+                intervals.put(start.getKey(), left);
+            }
+        }
+        while (entry != null && entry.getKey() < right) {
+            if (entry.getValue() <= right) {
+                intervals.remove(entry.getKey());
+                entry = intervals.higherEntry(entry.getKey());
+            } else {
+                intervals.put(right, entry.getValue());
+                intervals.remove(entry.getKey());
+                break;
+            }
+        }
     }
 
 }
