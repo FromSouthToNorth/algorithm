@@ -84,7 +84,8 @@ public class Topic715RangeModule {
                 int ri = start.getValue();
                 if (start.getKey() == left) {
                     intervals.remove(start.getKey());
-                } else {
+                }
+                else {
                     intervals.put(start.getKey(), left);
                 }
                 if (right != ri) {
@@ -100,7 +101,8 @@ public class Topic715RangeModule {
             if (entry.getValue() <= right) {
                 intervals.remove(entry.getKey());
                 entry = intervals.higherEntry(entry.getKey());
-            } else {
+            }
+            else {
                 intervals.put(right, entry.getValue());
                 intervals.remove(entry.getKey());
                 break;
