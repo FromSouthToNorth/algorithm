@@ -30,7 +30,7 @@ import java.util.Deque;
  */
 public class Topic513FindBottomLeftValue {
 
-    public static int findBottomLeftValue(TreeNode root) {
+    public static int findBottomLeftValue1(TreeNode root) {
         Deque<TreeNode> d = new ArrayDeque<>();
         d.addLast(root);
         int ans = 0;
@@ -44,6 +44,26 @@ public class Topic513FindBottomLeftValue {
             }
         }
         return ans;
+    }
+
+    static int curVal;
+
+    static int curHigh;
+
+    public static int findBottomLeftValue2(TreeNode root) {
+        dfs(root, 0);
+        return curHigh;
+    }
+
+     static void dfs(TreeNode root, int high) {
+        if (root == null) return;
+        high++;
+        dfs(root.left, high);
+        dfs(root.right, high);
+        if (high > curHigh) {
+            curHigh = high;
+            curVal = root.val;
+        }
     }
 
 }
