@@ -23,16 +23,16 @@ public class Topic6108DecodeMessage {
 
     public static String decodeMessage(String key, String message) {
         Map<Character, Character> map = new HashMap<>();
-        for (char c : key.toCharArray()) {
-            if (c != ' ') {
-                map.put(c, map.getOrDefault(c, (char) (map.size() + 'a')));
+        for (int i = 0; i < key.length(); i++) {
+            if (key.charAt(i) != ' ') {
+                map.put(key.charAt(i), map.getOrDefault(key.charAt(i), (char) (map.size() + 'a')));
             }
         }
-        StringBuilder ans = new StringBuilder();
-        for (char c : message.toCharArray()) {
-            ans.append(map.getOrDefault(c, ' '));
+        StringBuilder res = new StringBuilder();
+        for (int i = 0; i < message.length(); i++) {
+            res.append(map.getOrDefault(message.charAt(i), ' '));
         }
-        return ans.toString();
+        return res.toString();
     }
 
 }
