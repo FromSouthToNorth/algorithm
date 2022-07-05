@@ -18,7 +18,7 @@ public class Topic729MyCalendar {
 
     public boolean book(int start, int end) {
         for (int[] ints : list) {
-            if (ints[0] > end && ints[1] > start) {
+            if (ints[0] < end && ints[1] > start) {
                 return false;
             }
         }
