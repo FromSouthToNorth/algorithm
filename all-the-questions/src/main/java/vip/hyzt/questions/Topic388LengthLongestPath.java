@@ -1,6 +1,7 @@
 package vip.hyzt.questions;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -72,9 +73,9 @@ public class Topic388LengthLongestPath {
             while (j < n && input.charAt(j) != '\n') {
                 if (input.charAt(j++) == '.') isDir = false;
             }
-            Integer cur = j - i;
-            Integer prev = level - 1 >= 0 ? hash[level - 1] : -1;
-            Integer path = prev + 1 + cur;
+            int cur = j - i;
+            int prev = level - 1 >= 0 ? hash[level - 1] : -1;
+            int path = prev + 1 + cur;
             if (isDir) hash[level] = path;
             else if (path > ans) ans = path;
             i = j + 1;
