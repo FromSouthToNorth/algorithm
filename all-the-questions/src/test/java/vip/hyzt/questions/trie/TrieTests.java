@@ -2,6 +2,8 @@ package vip.hyzt.questions.trie;
 
 import org.junit.Test;
 
+import java.math.BigDecimal;
+
 public class TrieTests {
 
     @Test
