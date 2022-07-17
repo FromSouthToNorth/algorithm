@@ -7,7 +7,7 @@ public class MaximumSum_02Tests {
     @Test
     public void maximumSum() {
         int[] nums = new int[] {18,43,36,13,7};
-        new MaximumSum_02().maximumSum(nums);
+        System.out.printf("%d \n", new MaximumSum_02().maximumSum(nums));
     }
 
 }
