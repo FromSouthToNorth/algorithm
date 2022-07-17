@@ -15,6 +15,7 @@
         <module>the-sorting</module>
         <module>math</module>
         <module>io</module>
+        <module>leetcode-weeks</module>
     </modules>
 
     <properties>
