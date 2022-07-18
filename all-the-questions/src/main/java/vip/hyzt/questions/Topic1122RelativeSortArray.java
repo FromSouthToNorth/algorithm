@@ -1,5 +1,6 @@
 package vip.hyzt.questions;
 
+
 import java.util.Arrays;
 
 /**
@@ -10,23 +11,24 @@ import java.util.Arrays;
 public class Topic1122RelativeSortArray {
 
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
+
         int[] cur = new int[1001];
-        int i = 0;
-        for (int n : arr1) {
-            cur[n]++;
+        int index = 0;
+        for (int i : arr1) {
+            cur[i]++;
         }
 
-        for (int n : arr2) {
-            while (cur[n] > 0) {
-                arr1[i++] = n;
-                cur[n]--;
+        for (int i : arr2) {
+            while (cur[i] > 0) {
+                arr1[index++] = i;
+                cur[i]--;
             }
         }
 
-        for (int n = 0; n < cur.length; n++) {
-            while (cur[n] > 0) {
-                arr1[i++] = n;
-                cur[n]--;
+        for (int i = 0; i < cur.length; i++) {
+            while (cur[i] > 0) {
+                arr1[index++] = i;
+                cur[i]--;
             }
         }
 
