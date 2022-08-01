@@ -9,7 +9,7 @@ public class MergeTests {
 
     @Test
     public void merge() {
-        Read read = new Read("/ints/8Mints.txt");
+        Read read = new Read("/ints/1Kints.txt");
         Integer[] a = read.readAllInteger();
         Merge.sort(a);
         System.out.println(Arrays.toString(a));

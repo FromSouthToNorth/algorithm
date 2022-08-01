@@ -31,11 +31,10 @@ public class Merge {
     public static void sort(Comparable[] a) {
         int n = a.length;
         Comparable[] aux = new Comparable[n];
-        for (int i = 1; i < n; i *= 2) {
-            for (int j = 0; j < n - i; j += i + i) {
-                int mid = j + i - 1;
-                int hi = Math.min(j + i + i - 1, n - 1);
-                merge(a, aux, j, mid, hi);
+        for (int i = 1; i < n; i = i+i) {
+            for (int lo = 0; lo < n - i; lo += i+i) {
+                int mid = lo + i - 1, hi = Math.min(lo + (i * 2) -1, n - 1);
+                merge(a, aux, lo, mid, hi);
             }
         }
     }

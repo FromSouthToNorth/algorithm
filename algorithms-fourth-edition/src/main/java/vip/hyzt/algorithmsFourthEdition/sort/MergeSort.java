@@ -1,7 +1,5 @@
 package vip.hyzt.algorithmsFourthEdition.sort;
 
-import java.util.Arrays;
-
 /**
  * <h3>归并排序</h3>
  * @author hy

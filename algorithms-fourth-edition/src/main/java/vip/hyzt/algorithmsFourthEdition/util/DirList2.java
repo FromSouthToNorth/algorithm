@@ -11,7 +11,7 @@ public class DirList2 {
             @Override
             public boolean accept(File dir, String name) {
                 String f = new File(name).getName();
-                return f.indexOf(fn) != -1;
+                return f.contains(fn);
             }
         };
     }
