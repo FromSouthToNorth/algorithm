@@ -1,8 +1,5 @@
 package vip.hyzt.weeks.weeks_302;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * <h3>6120. 数组能形成多少数对</h3>
  * @see <a href="https://leetcode.cn/problems/maximum-number-of-pairs-in-array/">https://leetcode.cn/problems/maximum-number-of-pairs-in-array/</a>

@@ -12,10 +12,6 @@
         <module>algorithms-fourth-edition</module>
         <module>datastructures</module>
         <module>bit-arithmetic</module>
-        <module>the-sorting</module>
-        <module>math</module>
-        <module>io</module>
-        <module>leetcode-weeks</module>
     </modules>
 
     <properties>

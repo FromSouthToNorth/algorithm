@@ -1,6 +1,7 @@
 package vip.hyzt.weeks.weeks_302;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.PriorityQueue;
 
 /**
  * <h3>6164. 数位和相等数对的最大和</h3>

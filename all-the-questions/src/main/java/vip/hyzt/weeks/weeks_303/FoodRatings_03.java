@@ -30,7 +30,7 @@ import java.util.TreeSet;
  */
 public class FoodRatings_03 extends HashMap<String, TreeSet<String>> {
 
-    private HashMap<String, Map.Entry<String, Integer>> map = new HashMap<>();
+    private HashMap<String, Entry<String, Integer>> map = new HashMap<>();
 
     public FoodRatings_03(String[] foods, String[] cuisines, int[] ratings) {
         for (int i = 0; i < foods.length; i++) {
