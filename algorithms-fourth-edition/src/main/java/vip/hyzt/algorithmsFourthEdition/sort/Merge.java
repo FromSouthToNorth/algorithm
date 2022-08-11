@@ -7,8 +7,8 @@ package vip.hyzt.algorithmsFourthEdition.sort;
 public class Merge {
 
     private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
-        for (int k = lo; k <= hi; k++) {
-            aux[k] = a[k];
+        if (hi + 1 - lo >= 0) {
+            System.arraycopy(a, lo, aux, lo, hi + 1 - lo);
         }
 
         int i = lo, j = mid + 1;
