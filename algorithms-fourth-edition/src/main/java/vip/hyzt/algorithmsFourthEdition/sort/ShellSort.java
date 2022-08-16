@@ -4,11 +4,12 @@ package vip.hyzt.algorithmsFourthEdition.sort;
  * 希尔排序
  * @author hy
  */
-public class Shell {
+public class ShellSort implements SortAlgorithm {
 
     private static final int FF = 4;
 
-    public static void sort(Comparable[] a) {
+    @Override
+    public <T extends Comparable<T>> void sort(T[] a) {
         int n = a.length;
         int h = 1;
         while (h < n/3) {
@@ -24,12 +25,13 @@ public class Shell {
         }
     }
 
-    private static boolean less(Comparable a, Comparable b) {
+    @Override
+    public <T extends Comparable<T>> boolean less(T a, T b) {
         return a.compareTo(b) < 0;
     }
 
-    private static void exch(Comparable[] a, int i, int j) {
-        Comparable t = a[i];
+    private <T extends Comparable<T>> void exch(T[] a, int i, int j) {
+        T t = a[i];
         a[i] = a[j];
         a[j] = t;
     }

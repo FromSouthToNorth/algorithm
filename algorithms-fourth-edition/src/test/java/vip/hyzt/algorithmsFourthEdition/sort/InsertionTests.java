@@ -12,16 +12,17 @@ public class InsertionTests {
     public void insertion() {
         In in = new In("/strs/tiny.txt");
         String[] strs = in.readAllStrings();
-        Insertion.sort(strs);
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.sort(strs);
         System.out.println(Arrays.toString(strs));
     }
 
     @Test
     public void insertion1M() {
-        Read read = new Read("/ints/1Mints.txt");
-        Integer[] a = read.readAllInteger();
-        Insertion.sort(a);
-        System.out.println(Arrays.toString(a));
+        Integer[] integers = {-2, -2, 0, -1, 0, 1, 2, 3, 4, 5, 66, 66, 0, 8, 9, 10, 9, 10, 6, 6, 8, 5, 2, 1};
+        InsertionSort insertionSort = new InsertionSort();
+        insertionSort.sort(integers);
+        System.out.println(Arrays.toString(integers));
     }
 
 }

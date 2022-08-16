@@ -18,14 +18,9 @@ public interface SortAlgorithm {
     <T extends Comparable<T>> void sort(T[] elements);
 
     /**
-     * 想要使用 JCF 列表的算法的辅助方法
-     * @param elements - a list should be sorted
-     * @return a sorted list
-     * @param <T> element type
+     * a 和 b 进行比较
+     * @param <T> 比较的元素类型
      */
-    @SuppressWarnings("unchecked")
-    default <T extends Comparable<T>> List<T> sort(List<T> elements) {
-        return Arrays.asList(sort(elements.toArray((T[]) new Comparable[elements.size()])));
-    }
+    <T extends Comparable<T>> boolean less(T a, T b);
 
 }

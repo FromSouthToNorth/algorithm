@@ -4,9 +4,10 @@ package vip.hyzt.algorithmsFourthEdition.sort;
  * 选择排序
  * @author hy
  */
-public class Selection {
+public class Selection implements SortAlgorithm {
 
-    public static void sort(Comparable[] a) {
+    @Override
+    public <T extends Comparable<T>> void sort(T[] a) {
         int n = a.length;
         for (int i = 0; i < n; i++) {
             int min = i;
@@ -19,23 +20,14 @@ public class Selection {
         }
     }
 
-    private static boolean less(Comparable v, Comparable w) {
+    public <T extends Comparable<T>> boolean less(T v, T w) {
         return v.compareTo(w) < 0;
     }
 
-    private static void exchange(Comparable[] a, int i, int j) {
-        Comparable t = a[i];
+    private <T extends Comparable<T>> void exchange(T[] a, int i, int j) {
+        T t = a[i];
         a[i] = a[j];
         a[j] = t;
-    }
-
-    private static boolean isSorted(Comparable[] a) {
-        for (int i = 1; i < a.length; i++) {
-            if (less(a[i], a[i - 1])) {
-                return false;
-            }
-        }
-        return true;
     }
 
 }

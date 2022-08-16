@@ -8,13 +8,13 @@ public class SortCompare {
     public static double time(String alg, Double[] a) {
         Stopwatch timer = new Stopwatch();
         if ("Insertion".equals(alg)) {
-            Insertion.sort(a);
+            new InsertionSort().sort(a);
         }
         if ("Selection".equals(alg)) {
-            Selection.sort(a);
+            new Selection().sort(a);
         }
         if ("Bubbling".equals(alg)) {
-            Bubbling.sort(a);
+            new BubblingSort().sort(a);
         }
         return timer.elapsedTime();
     }

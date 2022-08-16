@@ -4,9 +4,27 @@ package vip.hyzt.algorithmsFourthEdition.sort;
  * 并归排序
  * @author hy
  */
-public class Merge {
+public class Merge implements SortAlgorithm {
 
-    private static void merge(Comparable[] a, Comparable[] aux, int lo, int mid, int hi) {
+    @Override
+    public <T extends Comparable<T>> void sort(T[] elements) {
+        int n = elements.length;
+        @SuppressWarnings("unchecked")
+        T[] aux = (T[]) new Comparable[n];
+        for (int size = 1; size < n; size = size + size) {
+            for (int lo = 0; lo < n - size; lo += size + size) {
+                int min = Math.min(lo + size + size - 1, n - 1);
+                merge(elements, aux, lo + size - 1, min, n - 1);
+            }
+        }
+    }
+
+    @Override
+    public <T extends Comparable<T>> boolean less(T a, T b) {
+        return a.compareTo(b) < 0;
+    }
+
+    private <T extends Comparable<T>> void merge(T[] a, T[] aux, int lo, int mid, int hi) {
         if (hi + 1 - lo >= 0) {
             System.arraycopy(a, lo, aux, lo, hi + 1 - lo);
         }
@@ -26,21 +44,6 @@ public class Merge {
                 a[k] = aux[i++];
             }
         }
-    }
-
-    public static void sort(Comparable[] a) {
-        int n = a.length;
-        Comparable[] aux = new Comparable[n];
-        for (int i = 1; i < n; i = i+i) {
-            for (int lo = 0; lo < n - i; lo += i+i) {
-                int mid = lo + i - 1, hi = Math.min(lo + (i * 2) -1, n - 1);
-                merge(a, aux, lo, mid, hi);
-            }
-        }
-    }
-
-    private static boolean less(Comparable v, Comparable w) {
-        return v.compareTo(w) < 0;
     }
 
 }

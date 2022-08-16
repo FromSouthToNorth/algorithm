@@ -11,7 +11,7 @@ public class BubblingTests {
     public void bubbling() {
         In in = new In("/strs/tiny.txt");
         String[] strs = in.readAllStrings();
-        Bubbling.sort(strs);
+        new BubblingSort().sort(strs);
         System.out.println(Arrays.toString(strs));
     }
 

@@ -12,7 +12,7 @@ public class ShellTests {
     public void shell() {
         Read read = new Read("/strs/tiny.txt");
         String[] a = read.readAllString();
-        Shell.sort(a);
+        new ShellSort().sort(a);
         System.out.println(Arrays.toString(a));
     }
 
@@ -20,7 +20,7 @@ public class ShellTests {
     public void shell1MTest() {
         Read read = new Read("/ints/1Mints.txt");
         Integer[] a = read.readAllInteger();
-        Shell.sort(a);
+        new ShellSort().sort(a);
         System.out.println(Arrays.toString(a));
     }
 
