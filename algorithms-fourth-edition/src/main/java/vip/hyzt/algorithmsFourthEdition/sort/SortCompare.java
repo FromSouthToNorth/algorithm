@@ -11,7 +11,7 @@ public class SortCompare {
             new InsertionSort().sort(a);
         }
         if ("Selection".equals(alg)) {
-            new Selection().sort(a);
+            new SelectionSort().sort(a);
         }
         if ("Bubbling".equals(alg)) {
             new BubblingSort().sort(a);

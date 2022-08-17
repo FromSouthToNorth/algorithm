@@ -4,7 +4,7 @@ package vip.hyzt.algorithmsFourthEdition.sort;
  * 选择排序
  * @author hy
  */
-public class Selection implements SortAlgorithm {
+public class SelectionSort implements SortAlgorithm {
 
     @Override
     public <T extends Comparable<T>> void sort(T[] a) {
