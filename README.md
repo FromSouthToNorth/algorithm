@@ -14,7 +14,6 @@
 
 ### 资料
 > - [LeetCode 周赛记录](https://zerotrac.github.io/leetcode_problem_rating/#/)
-> - [算法通关手册](https://algo.itcharge.cn/)
 > - [labuladong 的算法小抄](https://labuladong.github.io/algo/)
-> - [CS-Notes](http://www.cyc2018.xyz/)
-> - [OI Wiki](https://oi-wiki.org/)
+> - [Python - 100天从新手到大师](https://github.com/jackfrued/Python-100-Days)
+> - [超过1000本的计算机经典书籍分享](https://github.com/forthespada/CS-Books)
