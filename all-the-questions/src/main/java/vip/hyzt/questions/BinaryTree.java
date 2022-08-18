@@ -148,6 +148,43 @@ public abstract class BinaryTree {
         return result;
     }
 
+
+    /**
+     * 每个节点所在的对应位置
+     */
+    public static void levelNodeVal(TreeNode root, int level) {
+        if (root == null) {
+            return;
+        }
+        // System.out.printf("节点 %s 在第 %d 层 \n", root, level);
+        // levelNodeVal(root.left, level + 1);
+        // levelNodeVal(root.right, level + 1);
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode node = root;
+        while (!stack.isEmpty() || node != null) {
+            while (node != null) {
+                System.out.printf("节点 %s 在第 %d 层 \n", node, level++);
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            node = node.right;
+        }
+    }
+
+    /**
+     * 每个节点的左右子树各有多少节点
+     */
+    public static int levelNodeCount(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        int leftCount = levelNodeCount(root.left);
+        int rightCount = levelNodeCount(root.right);
+        System.out.printf("节点 %s 的左节点有 %d 个, 右节点有 %d 个 \n", root, leftCount, rightCount);
+        return (leftCount + rightCount) + 1;
+    }
+
     /**
      * 广度优先搜索
      */
