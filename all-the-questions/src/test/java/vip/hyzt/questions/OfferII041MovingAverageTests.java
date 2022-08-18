@@ -6,7 +6,7 @@ public class OfferII041MovingAverageTests {
 
     @Test
     public void movingAverage() {
-        OfferII041MovingAverage movingAverage = new OfferII041MovingAverage(3);
+        TopicOfferII041MovingAverage movingAverage = new TopicOfferII041MovingAverage(3);
         System.out.println(movingAverage.next(1));
         System.out.println(movingAverage.next(10));
         System.out.println(movingAverage.next(3));

@@ -4,7 +4,12 @@ import java.util.*;
 
 /**
  * <h3>二叉树遍历</h3>
- *
+ * <ul>
+ *     <li>前序</li>
+ *     <li>中序</li>
+ *     <li>后序</li>
+ * </ul>
+ * <img src="https://labuladong.github.io/algo/images/%e4%ba%8c%e5%8f%89%e6%a0%91%e6%94%b6%e5%ae%98/2.jpeg">
  * @author hy
  */
 public abstract class BinaryTree {
@@ -48,29 +53,52 @@ public abstract class BinaryTree {
     /**
      * 前序迭代
      */
-    public static void iteratePreorderTraversal(TreeNode root) {
+    public static List<Integer> iteratePreorderTraversal(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
         if (root == null) {
-            return;
+            return result;
         }
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode node = root;
         while (!stack.isEmpty() || node != null) {
             while (node != null) {
-                System.out.println(node.val);
+                result.add(node.val);
                 stack.push(node);
                 node = node.left;
             }
             node = stack.pop();
             node = node.right;
         }
+        return result;
+    }
+
+    public static List<Integer> inOrderIteration(TreeNode root) {
+        ArrayList<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
+        Deque<TreeNode> stack = new LinkedList<>();
+        TreeNode node = root;
+        while (!stack.isEmpty() || node != null) {
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            result.add(node.val);
+            node = node.right;
+        }
+        return result;
     }
 
     /**
      * 后序迭代
      */
     public static List<Integer> postorderDequeTraversal(TreeNode root) {
-        List<Integer> res = new ArrayList<>();
-        if (root == null) return res;
+        List<Integer> result = new ArrayList<>();
+        if (root == null) {
+            return result;
+        }
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode prev = null;
         while (root != null || !stack.isEmpty()) {
@@ -80,7 +108,7 @@ public abstract class BinaryTree {
             }
             root = stack.pop();
             if (root.right == null || prev == root.right) {
-                res.add(root.val);
+                result.add(root.val);
                 prev = root;
                 root = null;
             }
@@ -89,16 +117,16 @@ public abstract class BinaryTree {
                 root = root.right;
             }
         }
-        return res;
+        return result;
     }
 
     /**
      * 广度优先搜索
      */
     public static List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> res = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
         if (root == null) {
-            return res;
+            return result;
         }
         Queue<TreeNode> stack = new LinkedList<>();
         stack.offer(root);
@@ -108,12 +136,16 @@ public abstract class BinaryTree {
             for (int i = 0; i < n; i++) {
                 TreeNode node = stack.poll();
                 level.add(node.val);
-                if (node.left != null) stack.offer(node.left);
-                if (node.right != null) stack.offer(node.right);
+                if (node.left != null) {
+                    stack.offer(node.left);
+                }
+                if (node.right != null) {
+                    stack.offer(node.right);
+                }
             }
-            res.add(level);
+            result.add(level);
         }
-        return res;
+        return result;
     }
 
 }

@@ -21,7 +21,7 @@ package vip.hyzt.questions;
  * @author hy
  * @see <a href="https://leetcode.cn/problems/one-away-lcci/">链接：https://leetcode.cn/problems/one-away-lcci/</a>
  */
-public class Offer01_05_OneEditAway {
+public class TopicOffer01_05_OneEditAway {
 
     public static boolean oneEditAway(String first, String second) {
         int n = first.length(), m = second.length();
