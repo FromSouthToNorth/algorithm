@@ -4,11 +4,36 @@ import java.util.*;
 
 /**
  * <h3>二叉树遍历</h3>
- * <ul>
- *     <li>前序</li>
- *     <li>中序</li>
- *     <li>后序</li>
- * </ul>
+ * <h4>前序: </h4>
+ * <pre>
+ *          0
+ *        ↙   ↘
+ *       1     4
+ *     ↙  ↘
+ *    2   3
+ *    <strong>result: </strong>
+ *    [0, 1, 2, 3, 4]
+ * </pre>
+ * <h4>中序: </h4>
+ * <pre>
+ *           0
+ *         ↗   ↘
+ *        1     4
+ *      ↗  ↘
+ *     2    3
+ *     <strong>result: </strong>
+ *     [2, 1, 3, 0, 4]
+ * </pre>
+ * <h4>后序: </h4>
+ * <pre>
+ *           0
+ *             ↖
+ *        1  →  4
+ *      ↗  ↘
+ *     2    3
+ *     <strong>result: </strong>
+ *     [2, 1, 3, 4, 0]
+ * </pre>
  * <img src="https://labuladong.github.io/algo/images/%e4%ba%8c%e5%8f%89%e6%a0%91%e6%94%b6%e5%ae%98/2.jpeg">
  * @author hy
  */
@@ -54,7 +79,7 @@ public abstract class BinaryTree {
      * 前序迭代
      */
     public static List<Integer> iteratePreorderTraversal(TreeNode root) {
-        ArrayList<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
         }
@@ -72,8 +97,11 @@ public abstract class BinaryTree {
         return result;
     }
 
+    /**
+     * 中序迭代
+     */
     public static List<Integer> inOrderIteration(TreeNode root) {
-        ArrayList<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>();
         if (root == null) {
             return result;
         }
