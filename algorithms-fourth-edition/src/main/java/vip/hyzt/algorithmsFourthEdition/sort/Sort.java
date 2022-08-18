@@ -3,19 +3,22 @@ package vip.hyzt.algorithmsFourthEdition.sort;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 根据对象的 key 进行排序
+ * @author hy
+ */
 public class Sort {
 
-    public static <T extends Comparable<T>> T[] sort(T[] a, T[] b) {
-        int length = a.length;
-        @SuppressWarnings("unchecked")
-        T[] result = (T[]) new Comparable[length];
-        Map<Integer, T> map = new HashMap<>();
+    public static Node[] sort(String[] ids, Node[] nodes) {
+        int length = nodes.length;
+        Node[] result = new Node[length];
+        Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < length; i++) {
-            map.put(i, a[i]);
+            map.put(ids[i], i);
         }
-        for (int i = 0; i < length; i++) {
-            if (map.containsKey(i)) {
-                result[i] = map.get(i);
+        for (Node node : nodes) {
+            if (map.containsKey(node.id)) {
+                result[map.get(node.id)] = node;
             }
         }
         return result;
