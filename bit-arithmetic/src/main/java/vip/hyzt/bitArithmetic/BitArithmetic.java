@@ -11,7 +11,7 @@ public abstract class BitArithmetic {
      * <p><b>示例 1：</b></p>
      * <pre>
      *     <strong>输入：</strong>num = 5, bit = 1
-     *     <strong>输出：</strong>20
+     *     <strong>输出：</strong>10
      *     <strong>解释：</strong>
      *     `5` 转换二进制为：0000 0000 0000 0000 0000 0000 0000 0101
      *     向左移一位为:     0000 0000 0000 0000 0000 0000 0000 101<i style="color:red">0</i>
@@ -142,7 +142,7 @@ public abstract class BitArithmetic {
      * <p><b>示例 2：</b></p>
      * <pre>
      *     <strong>输入：</strong>num1 = 9, num2 = 8
-     *     <strong>输出：</strong>11
+     *     <strong>输出：</strong>9
      *     <strong>解释：</strong>
      *     十进制 `9` -> 二进制：0000 0000 0000 0000 0000 0000 0000 `1001`
      *     十进制 `8` -> 二进制：0000 0000 0000 0000 0000 0000 0000 `1000`

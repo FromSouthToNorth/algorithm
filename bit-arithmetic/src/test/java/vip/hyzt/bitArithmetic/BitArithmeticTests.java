@@ -18,6 +18,7 @@ public class BitArithmeticTests {
 
     @Test
     public void unsignedShiftRight() {
+        System.out.println("5 >>> 1 = " + BitArithmetic.unsignedShiftRight(5, 1));
         System.out.println("-5 >>> 2 = " + BitArithmetic.unsignedShiftRight(-5, 2));
     }
 
