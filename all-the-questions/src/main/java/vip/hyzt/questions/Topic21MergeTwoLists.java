@@ -32,36 +32,24 @@ package vip.hyzt.questions;
 public abstract class Topic21MergeTwoLists {
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if (l1 == null) return l2;
-        if (l2 == null) return l1;
-
-        ListNode dummy = new ListNode(0);
-        ListNode cur = dummy;
+        // 哨兵节点
+        ListNode preHead = new ListNode(-1);
+        // 链表指针
+        ListNode prev = preHead;
         while (l1 != null && l2 != null) {
             if (l1.val < l2.val) {
-                cur.next = l1;
-                cur = cur.next;
+                prev.next = l1;
                 l1 = l1.next;
             }
             else {
-                cur.next = l2;
-                cur = cur.next;
+                prev.next = l2;
                 l2 = l2.next;
             }
+            prev = prev.next;
         }
-        while (l1 != null) {
-            cur.next = l1;
-            cur = cur.next;
-            l1 = l1.next;
-        }
-
-        while (l2 != null) {
-            cur.next = l2;
-            cur = cur.next;
-            l2 = l2.next;
-        }
-
-        return dummy.next;
+        // 合并剩下的链表节点
+        prev.next = l1 != null ? l1 : l2;
+        return preHead.next;
     }
 
 }
