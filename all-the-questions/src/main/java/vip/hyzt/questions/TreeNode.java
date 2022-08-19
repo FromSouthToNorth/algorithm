@@ -1,9 +1,31 @@
 package vip.hyzt.questions;
 
+/**
+ * <h3>二叉树节点</h3>
+ * <pre>
+ *       root
+ *        0
+ *      /   \
+ *     6     7
+ *   left  right
+ * </pre>
+ * @author hy
+ */
 public class TreeNode {
 
+    /**
+     * 节点值
+     */
     int val;
+
+    /**
+     * 二叉树左节点
+     */
     TreeNode left;
+
+    /**
+     * 二叉树右节点
+     */
     TreeNode right;
 
     TreeNode() {
