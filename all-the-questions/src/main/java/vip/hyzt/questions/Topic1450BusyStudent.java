@@ -1,7 +1,5 @@
 package vip.hyzt.questions;
 
-import java.util.Arrays;
-
 /**
  * <h3>1450. 在既定时间做作业的学生人数</h3>
  * <p>给你两个整数数组 startTime（开始时间）和 endTime（结束时间），并指定一个整数 queryTime 作为查询时间。</p>
