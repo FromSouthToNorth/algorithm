@@ -1,5 +1,7 @@
 package vip.hyzt.questions;
 
+import java.util.Arrays;
+
 /**
  * <h3>1450. 在既定时间做作业的学生人数</h3>
  * <p>给你两个整数数组 startTime（开始时间）和 endTime（结束时间），并指定一个整数 queryTime 作为查询时间。</p>
@@ -46,12 +48,16 @@ package vip.hyzt.questions;
  */
 public class Topic1450BusyStudent {
 
-    public static int busyStudent(int[] startTime, int[] endTime, int queryTime) {
-        int ans = 0;
+    public int busyStudent(int[] startTime, int[] endTime, int queryTime) {
+        int[] c = new int[1010];
         for (int i = 0; i < startTime.length; i++) {
-            if (queryTime >= startTime[i] && queryTime <= endTime[i]) ans++;
+            c[startTime[i]]++;
+            c[endTime[i] + 1]--;
         }
-        return ans;
+        for (int i = 1; i <= queryTime; i++) {
+            c[i] += c[i - 1];
+        }
+        return c[queryTime];
     }
 
 }
