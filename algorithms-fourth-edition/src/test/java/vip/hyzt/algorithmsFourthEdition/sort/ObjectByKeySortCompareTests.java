@@ -2,7 +2,7 @@ package vip.hyzt.algorithmsFourthEdition.sort;
 
 import org.junit.Test;
 
-public class SortCompareTests {
+public class ObjectByKeySortCompareTests {
 
     @Test
     public void sortCompare() {

@@ -7,7 +7,7 @@ import java.util.Map;
  * 根据对象的 key 进行排序
  * @author hy
  */
-public class Sort {
+public class ObjectByKeySort {
 
     public static Node[] sort(String[] ids, Node[] nodes) {
         int length = nodes.length;

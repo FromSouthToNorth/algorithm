@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 
-public class SortTests {
+public class ObjectByKeySortTests {
 
     @Test
     public void sort() {
@@ -15,7 +15,7 @@ public class SortTests {
         nodes[1] = new Node("key2","22");
         nodes[2] = new Node("key3","333");
 
-        Node[] result = Sort.sort(ids, nodes);
+        Node[] result = ObjectByKeySort.sort(ids, nodes);
         System.out.println(Arrays.toString(result));
     }
 
