@@ -3,10 +3,8 @@ package vip.hyzt.algorithmsFourthEdition.sort;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
 
-public class MergeObjectByKeySortTests {
+public class MergeSortTests {
 
     @Test
     public void merge() {
