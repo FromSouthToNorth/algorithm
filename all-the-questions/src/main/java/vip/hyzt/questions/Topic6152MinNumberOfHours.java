@@ -44,9 +44,10 @@ package vip.hyzt.questions;
 public class Topic6152MinNumberOfHours {
 
     public int minNumberOfHours(int initialEnergy, int initialExperience, int[] energy, int[] experience) {
-        int count = 0;
-        for (int i = 0; i < energy.length; i++) {
-            count += Math.max(0, energy[i] - initialEnergy + 1) + Math.max(0, experience[i] - initialExperience + 1);
+        int count = 0, length = energy.length;
+        for (int i = 0; i < length; i++) {
+            count += Math.max(0, energy[i] - initialEnergy + 1)
+                    + Math.max(0, experience[i] - initialExperience + 1);
             initialEnergy = Math.max(initialEnergy, energy[i] + 1) - energy[i];
             initialExperience = Math.max(initialExperience, experience[i] + 1) + experience[i];
         }
