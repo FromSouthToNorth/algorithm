@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 /**
  * <h3>6158. 字母移位 II</h3>
- * <p>给你一个小写英文字母组成的字符串 s 和一个二维整数数组 shifts ，其中 shifts[i] = [start<sub>i</sub>, end<sub>i</sub>, direction<sub>i</sub>] 。对于每个 i ，将 s 中从下标 start<sub>i</sub> 到下标 end<sub>i</sub> （两者都包含）所有字符都进行移位运算，如果 direction<sub>i</sub> = 1 将字符向后移位，如果 direction<sub>i</sub> = 0 将字符向前移位。。</p>
+ * <p>给你一个小写英文字母组成的字符串 s 和一个二维整数数组 shifts ，其中 shifts[i] = [start<sub>i</sub>, end<sub>i</sub>, direction<sub>i</sub>] 。对于每个 i ，将 s 中从下标 start<sub>i</sub> 到下标 end<sub>i</sub> （两者都包含）所有字符都进行移位运算，如果 direction<sub>i</sub> = 1 将字符向后移位，如果 direction<sub>i</sub> = 0 将字符向前移位。</p>
  * <p>将一个字符 <strong>向后</strong> 移位的意思是将这个字符用字母表中 <strong>下一个</strong> 字母替换（字母表视为环绕的，所以 'z' 变成 'a'）。类似的，将一个字符 <strong>向前</strong> 移位的意思是将这个字符用字母表中 <strong>前一个</strong> 字母替换（字母表是环绕的，所以 'a' 变成 'z' ）。</p>
  * <p>请你返回对 s 进行所有移位操作以后得到的最终字符串。</p>
  * <h4>示例 1：</h4>

@@ -2,7 +2,7 @@ package vip.hyzt.questions;
 
 import org.junit.Test;
 
-public class OfferII041MovingAverageTests {
+public class TopicOfferII041MovingAverageTests {
 
     @Test
     public void movingAverage() {
