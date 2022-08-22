@@ -3,48 +3,46 @@ package vip.hyzt.questions;
 import java.util.Arrays;
 
 /**
- * 4. 寻找两个正序数组的中位数
+ * <h3>4. 寻找两个正序数组的中位数</h3>
  * <p>给定两个大小分别为 m 和 n 的正序（从小到大）数组nums1 和nums2。请你找出并返回这两个正序数组的 <b>中位数</b> 。</p>
  *
  * <p>算法的时间复杂度应该为 O(log (m+n)) 。</p>
  *
- * <h3>示例 1：</h3>
+ * <h4>示例 1：</h4>
  * <ul>
  *     <li>输入：nums1 = [1,3], nums2 = [2]</li>
  *     <li>输出：2.00000</li>
  *     <li>解释：合并数组 = [1,2,3] ，中位数 2</li>
  * </ul>
  *
- * <h3>示例 2：</h2>
+ * <h4>示例 2：</h4>
  * <ul>
  *     <li>输入：nums1 = [1,2], nums2 = [3,4]</li>
  *     <li>输出：2.50000</li>
  *     <li>解释：合并数组 = [1,2,3,4] ，中位数 (2 + 3) / 2 = 2.5</li>
  * </ul>
  *
- * <h3>示例 3：</h2>
+ * <h4>示例 3：</h4>
  *
  * <ul>
  *     <li>输入：nums1 = [0,0], nums2 = [0,0]</li>
  *     <li>输出：0.00000</li>
  * </ul>
  *
- * <h3>示例 4：</h3>
+ * <h4>示例 4：</h4>
  * <ul>
  *     <li>输入：nums1 = [], nums2 = [1]</li>
  *     <li>输出：1.00000</li>
  * </ul>
  *
- * <h3>示例 5：</h3>
+ * <h4>示例 5：</h4>
  * <ul>
  *     <li>输入：nums1 = [2], nums2 = []</li>
  *     <li>输出：2.00000<</li>
  * </ul>
- *
+ * @see <a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays</a>
  * @author 力扣（LeetCode）
  * @author hy
- * @see <a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays">链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays</a>
- * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public abstract class Topic4FindMedianSortedArrays {
 

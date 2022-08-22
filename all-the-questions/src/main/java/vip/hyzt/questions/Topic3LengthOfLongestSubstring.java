@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * <h3>3. 无重复字符的最长子串</h3>
  * <p>给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。<p/>
  * <p>示例 1:<p/>
  * 输入: s = "abcabcbb"<br/>
@@ -14,9 +15,9 @@ import java.util.Map;
  * 输入: s = "bbbbb"<br>
  * 输出: 1<br/>
  * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。<br/>
+ * @see <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a>
  * @author 力扣（LeetCode）
  * @author hy
- * @see <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a>
  */
 public abstract class Topic3LengthOfLongestSubstring {
 

@@ -40,10 +40,9 @@ import java.util.Arrays;
  * <li>1 <= s.length <= 1000</li>
  * <li>s 由英文字母（小写和大写）、',' 和 '.' 组成</li>
  * <li>1 <= numRows <= 1000</li>
- *
+ * @see <a href="https://leetcode.cn/problems/zigzag-conversion"> 链接：https://leetcode.cn/problems/zigzag-conversion</a>
  * @author 力扣（LeetCode）
  * @author hy
- * @see <a href="https://leetcode.cn/problems/zigzag-conversion"> 链接：https://leetcode.cn/problems/zigzag-conversion</a>
  */
 public class Topic6Convert {
 
