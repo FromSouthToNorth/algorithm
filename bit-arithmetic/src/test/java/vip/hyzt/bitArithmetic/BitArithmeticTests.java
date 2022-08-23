@@ -50,4 +50,35 @@ public class BitArithmeticTests {
         System.out.println("~1 = " + BitArithmetic.bitNot(1));
     }
 
+    @Test
+    public void add() {
+        System.out.println(BitArithmetic.add(1, 2));
+        System.out.println(BitArithmetic.add(99, 2));
+        System.out.println(BitArithmetic.add(-1, 2));
+    }
+
+    @Test
+    public void subtraction() {
+        System.out.println(BitArithmetic.subtraction(9, 0));
+        System.out.println(BitArithmetic.subtraction(9, 12));
+        System.out.println(BitArithmetic.subtraction(8, -1));
+    }
+
+    @Test
+    public void multiply() {
+        System.out.println(BitArithmetic.multiply(1, 2));
+        System.out.println(BitArithmetic.multiply(6, 0));
+        System.out.println(BitArithmetic.multiply(6, 3));
+        System.out.println(BitArithmetic.multiply(-2, 6));
+        System.out.println(BitArithmetic.multiply(2, -6));
+    }
+
+    @Test
+    public void divide() {
+        System.out.println(BitArithmetic.divide(2, 2));
+        System.out.println(BitArithmetic.divide(6, 3));
+        System.out.println(BitArithmetic.divide(9, 4));
+        System.out.println(BitArithmetic.divide(20, 9));
+    }
+
 }

@@ -236,4 +236,82 @@ public abstract class BitArithmetic {
         return ~num;
     }
 
+
+    /**
+     * 加法
+     */
+    public static int add(int a, int b) {
+        int sum, carry;
+        sum = a ^ b;
+        carry = (a & b) << 1;
+        while (carry != 0) {
+            int tmp = sum;
+            sum = sum ^ carry;
+            carry = (tmp & carry) << 1;
+        }
+        return sum;
+    }
+
+    /**
+     * 减法
+     */
+    public static int subtraction(int a, int b) {
+        return add(a, add(~b, 1));
+    }
+
+    private static int getSign(int n) {
+        return n >> 31;
+    }
+
+    private static int abs(int n) {
+        return (getSign(n) & 1) != 0 ? add(n, 1) : n;
+    }
+
+    /**
+     * 乘法
+     */
+    public static int multiply(int a, int b) {
+        int multiplicand = a < 0 ? add(~a, 1) : a;
+        int multiplier = b < 0 ? add(~b, 1) : b;
+
+        int result = 0;
+        while (multiplier > 0) {
+            if ((multiplier & 1) > 0) {
+                result = add(result, multiplicand);
+            }
+            multiplicand = multiplicand << 1;
+            multiplier = multiplier >> 1;
+        }
+        if ((a ^ b) < 0) {
+            result = add(~result, 1);
+        }
+        return result;
+    }
+
+    /**
+     * 除法
+     */
+    public static int divide(int a, int b) {
+        // 先取被除数和除数的绝对值
+        int dividend = a > 0 ? a : add(~a, 1);
+        int divisor = b > 0 ? b : add(~b, 1);
+        int quotient = 0;
+        int remainder = 0;
+        for(int i = 31; i >= 0; i--) {
+
+            if((dividend >> i) >= divisor) {
+                quotient = add(quotient, 1 << i);
+                dividend = subtraction(dividend, divisor << i);
+            }
+        }
+        // 确定商的符号
+        if((a ^ b) < 0){
+            // 如果除数和被除数异号，则商为负数
+            quotient = add(~quotient, 1);
+        }
+        // 确定余数符号
+        remainder = b > 0 ? dividend : add(~dividend, 1);
+        return quotient;
+    }
+
 }
