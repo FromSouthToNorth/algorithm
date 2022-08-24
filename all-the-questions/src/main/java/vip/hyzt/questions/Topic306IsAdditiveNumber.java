@@ -28,7 +28,7 @@ package vip.hyzt.questions;
  * @author hy
  * @see <a href="https://leetcode-cn.com/problems/additive-number">链接：https://leetcode-cn.com/problems/additive-number</a>
  */
-public abstract class Topic206IsAdditiveNumber {
+public abstract class Topic306IsAdditiveNumber {
 
     public static boolean isAdditiveNumber(String num) {
         int length = num.length();
@@ -70,7 +70,7 @@ public abstract class Topic206IsAdditiveNumber {
     }
 
     private static String stringAdd(String s, int firstStart, int firstEnd, int secondStart, int secondEnd) {
-        StringBuffer third = new StringBuffer();
+        StringBuilder third = new StringBuilder();
         int carry = 0, cur = 0;
         while (firstEnd >= firstStart || secondEnd >= secondStart || carry != 0) {
             cur = carry;

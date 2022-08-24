@@ -32,4 +32,12 @@ public class ListNode {
         this.next = next;
     }
 
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
+
 }
