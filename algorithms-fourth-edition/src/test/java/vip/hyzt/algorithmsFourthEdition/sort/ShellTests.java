@@ -24,9 +24,4 @@ public class ShellTests {
         System.out.println(Arrays.toString(a));
     }
 
-    @Test
-    public void shell2MTest() throws IOException {
-
-    }
-
 }

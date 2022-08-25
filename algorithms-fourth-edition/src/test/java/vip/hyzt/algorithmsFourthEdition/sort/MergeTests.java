@@ -9,12 +9,12 @@ public class MergeTests {
 
     @Test
     public void merge() {
-        Read read = new Read("/ints/1Kints.txt");
-        Integer[] a = read.readAllInteger();
+//        Read read = new Read("/ints/1Kints.txt");
+//        Integer[] a = read.readAllInteger();
         Merge merge = new Merge();
-        merge.sort(a);
-        System.out.println(Arrays.toString(a));
-        Integer[] elements = {5, 5, 4, 4, 5, 5, 1, 1, 2, 2, -1, -2, 5, 5, 3, 3};
+//        merge.sort(a);
+//        System.out.println(Arrays.toString(a));
+        Character[] elements = {'M','E', 'R', 'G', 'E', 'S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E'};
         merge.sort(elements);
         System.out.println(Arrays.toString(elements));
     }
