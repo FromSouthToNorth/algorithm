@@ -8,9 +8,9 @@ import java.util.Arrays;
  */
 public class Merge implements SortAlgorithm {
 
-
     @Override
     public <T extends Comparable<T>> void sort(T[] elements) {
+        System.out.println(Arrays.toString(elements));
         int n = elements.length;
         @SuppressWarnings("unchecked")
         T[] aux = (T[]) new Comparable[n];

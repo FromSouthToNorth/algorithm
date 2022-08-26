@@ -14,7 +14,7 @@ public class MergeTests {
         Merge merge = new Merge();
 //        merge.sort(a);
 //        System.out.println(Arrays.toString(a));
-        Character[] elements = {'M','E', 'R', 'G', 'E', 'S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E'};
+        Character[] elements = {'M', 'E', 'R', 'G', 'E', 'S', 'O', 'R', 'T', 'E', 'X', 'A', 'M', 'P', 'L', 'E'};
         merge.sort(elements);
         System.out.println(Arrays.toString(elements));
     }
