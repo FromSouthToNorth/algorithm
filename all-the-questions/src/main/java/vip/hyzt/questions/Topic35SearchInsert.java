@@ -71,11 +71,12 @@ public class Topic35SearchInsert {
         int n = nums.length;
         int left = 0, right = n - 1, ans = n;
         while (left <= right) {
-            int mid = ((right - left) >> 1) + left;
-            if (target <= nums[mid]) {
+            int mid = left + ((right - left) >> 1), num = nums[mid];
+            if (target <= num) {
                 ans = mid;
                 right = mid - 1;
-            } else {
+            }
+            else {
                 left = mid + 1;
             }
         }
