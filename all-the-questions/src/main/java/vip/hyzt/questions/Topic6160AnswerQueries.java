@@ -38,6 +38,13 @@ public class Topic6160AnswerQueries {
     public int[] answerQueries(int[] nums, int[] queries) {
         Arrays.sort(nums);
         int n = queries.length, res[] = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            for (int num : nums) {
+//                if ((queries[i] -= num) >= 0) {
+//                    res[i]++;
+//                }
+//            }
+//        }
         for (int i = 0; i < n; i++) {
             while (res[i] < nums.length &&
                     (queries[i] -= nums[res[i]]) >= 0) {
