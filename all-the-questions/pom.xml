@@ -24,6 +24,12 @@
             <scope>test</scope>
         </dependency>
 
+        <dependency>
+            <groupId>vip.hyzt</groupId>
+            <artifactId>bit-arithmetic</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
     </dependencies>
 
 </project>
