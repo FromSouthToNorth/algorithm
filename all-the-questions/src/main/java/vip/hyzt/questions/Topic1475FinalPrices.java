@@ -41,7 +41,8 @@ import java.util.Deque;
 public class Topic1475FinalPrices {
 
     public int[] finalPrices(int[] prices) {
-        int n = prices.length, result[] = new int[n];
+        int n = prices.length;
+        int[] result = new int[n];
         Deque<Integer> stack = new ArrayDeque<>();
         for (int i = n - 1; i >= 0; i--) {
             while (!stack.isEmpty() && stack.peek() > prices[i]) {
@@ -50,6 +51,16 @@ public class Topic1475FinalPrices {
             result[i] = stack.isEmpty() ? prices[i] : prices[i] - stack.peek();
             stack.push(prices[i]);
         }
+//        for (int i = 0; i < n; i++) {
+//            int price = 0;
+//            for (int j = i + 1; j < n; j++) {
+//                if (prices[j] <= prices[i]) {
+//                    price = prices[j];
+//                    break;
+//                }
+//            }
+//            result[i] = prices[i] - price;
+//        }
         return result;
     }
 
