@@ -7,10 +7,10 @@
 ## 算法其他相关资料
 
 ### 语言
+> - [C](https://github.com/TheAlgorithms/C)
+> - [C++](https://github.com/TheAlgorithms/C-Plus-Plus)
 > - [JavaScript](https://github.com/trekhleb/javascript-algorithms)
 > - [Python](https://github.com/TheAlgorithms/Python)
-> - [c++](https://github.com/TheAlgorithms/C-Plus-Plus)
-> - [C](https://github.com/TheAlgorithms/C)
 
 ### 资料
 > - [LeetCode 周赛记录](https://zerotrac.github.io/leetcode_problem_rating/#/)
