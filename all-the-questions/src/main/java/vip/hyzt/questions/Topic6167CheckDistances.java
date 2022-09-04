@@ -1,5 +1,7 @@
 package vip.hyzt.questions;
 
+import java.util.Arrays;
+
 /**
  * <h2>6167. 检查相同字母间的距离</h2>
  * <p>给你一个下标从 <strong>0</strong> 开始的字符串 s ，该字符串仅由小写英文字母组成，s 中的每个字母都 <strong>恰好</strong> 出现 <strong>两次</strong> 。另给你一个下标从 <strong>0</strong> 开始、长度为 26 的的整数数组 distance 。</p>
@@ -40,13 +42,29 @@ package vip.hyzt.questions;
 public class Topic6167CheckDistances {
 
     public boolean checkDistances(String s, int[] distance) {
-        int[] index = new int[256];
-        for (int i = 0 ; i < s.length(); i++) {
-            char c = s.charAt(i);
+        int n = s.length();
+//        for (int i = 0; i < n; i++) {
+//            int count = 0;
+//            for (int j = i + 1; j < n; j++) {
+//                if (s.charAt(i) != s.charAt(j)) {
+//                    count++;
+//                }
+//                else {
+//                    if (count != distance[s.charAt(i) - 'a']) {
+//                        return false;
+//                    }
+//                    break;
+//                }
+//            }
+//        }
+///////
+        int[] index = new int[26];
+        for (int i = 0; i < n; i++) {
+            int c = s.charAt(i) - 'a';
             if (index[c] == 0) {
                 index[c] = i + 1;
             }
-            else if (i - index[c] != distance[c - 'a']) {
+            else if (i - index[c] != distance[c]) {
                 return false;
             }
         }
