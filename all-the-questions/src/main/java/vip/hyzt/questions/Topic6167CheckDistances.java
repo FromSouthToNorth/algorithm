@@ -1,7 +1,5 @@
 package vip.hyzt.questions;
 
-import java.util.Arrays;
-
 /**
  * <h2>6167. 检查相同字母间的距离</h2>
  * <p>给你一个下标从 <strong>0</strong> 开始的字符串 s ，该字符串仅由小写英文字母组成，s 中的每个字母都 <strong>恰好</strong> 出现 <strong>两次</strong> 。另给你一个下标从 <strong>0</strong> 开始、长度为 26 的的整数数组 distance 。</p>
