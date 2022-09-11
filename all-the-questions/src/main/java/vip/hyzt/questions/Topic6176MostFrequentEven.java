@@ -1,6 +1,8 @@
 package vip.hyzt.questions;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * <h2>6176. 出现最频繁的偶数元素</h2>
@@ -38,6 +40,17 @@ import java.util.Arrays;
 public class Topic6176MostFrequentEven {
 
     public int mostFrequentEven(int[] nums) {
+//        var cnt = new HashMap<Integer, Integer>();
+//        for (var x : nums) {
+//            if (x % 2 == 0) {
+//                cnt.put(x, cnt.getOrDefault(x, 0) + 1);
+//            }
+//        }
+//        if (cnt.isEmpty()) {
+//            return -1;
+//        }
+//        var maxCnt = cnt.values().stream().max(Integer::compare).get();
+//        return cnt.entrySet().stream().filter(e -> Objects.equals(e.getValue(), maxCnt)).min(Map.Entry.comparingByKey()).get().getKey();
         int count[] = new int[100001], result = 0;
         for (int num : nums) {
             count[num + 1]++;
