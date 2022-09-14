@@ -1,0 +1,1 @@
+package vip.hyzt.questions;import org.junit.Test;public class Topic1619TrimMeanTests {    @Test    public void trimMean() {        Topic1619TrimMean topic1619TrimMean = new Topic1619TrimMean();        int[] arr = { 1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3 };        System.out.printf("res: %f\n", topic1619TrimMean.trimMean(arr));    }}
