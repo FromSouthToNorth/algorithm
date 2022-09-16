@@ -34,7 +34,7 @@ package vip.hyzt.questions;
 public class Topic2398MaximumRobots {
 
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
-
+        return 0;
     }
 
 }

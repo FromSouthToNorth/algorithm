@@ -1,9 +1,5 @@
 package vip.hyzt.questions;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * <h2>2396. 严格回文的数字</h2>
  * <p>如果一个整数 n 在 b 进制下（b 为 2 到 n - 2 之间的所有整数）对应的字符串 <strong>全部</strong> 都是 <strong>回文的</strong> ，那么我们称这个数 n 是 <strong>严格回文</strong> 的。</p>
