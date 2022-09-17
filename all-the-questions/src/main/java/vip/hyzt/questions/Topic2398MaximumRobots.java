@@ -34,7 +34,41 @@ package vip.hyzt.questions;
 public class Topic2398MaximumRobots {
 
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
-        return 0;
+        int n = chargeTimes.length;
+        long[] preSum = new long[n + 1];
+        for (int i = 1; i <= n; i++) {
+            preSum[i] = preSum[i - 1] + runningCosts[i - 1];
+        }
+        int l = 0, r = n;
+        int[] queue = new int[n];
+        while (l < r) {
+            int mid = l + r + 1>> 1;
+            int head = 0, tail = 0;
+            boolean success = false;
+            for (int i = 0; i < n; i++) {
+                while (head < tail && i - queue[head] >= mid) {
+                    head++;
+                }
+                while (head < tail && chargeTimes[queue[tail - 1]] <= chargeTimes[i]) {
+                    tail--;
+                }
+                queue[tail++] = i;
+                if (i >= mid - 1) {
+                    long cost = chargeTimes[queue[head]] + mid * (preSum[i + 1] - preSum[i + 1 - mid]);
+                    if (cost <= budget) {
+                        success = true;
+                        break;
+                    }
+                }
+            }
+            if (!success) {
+                r = mid - 1;
+            }
+            else {
+                l = mid;
+            }
+        }
+        return l;
     }
 
 }
