@@ -17,8 +17,9 @@ public class Pair {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Pair pair) {
-            return x == pair.x && y == pair.y;
+        if (obj instanceof Pair) {
+            Pair pair2 = (Pair) obj;
+            return x == pair2.x && y == pair2.y;
         }
         return false;
     }
