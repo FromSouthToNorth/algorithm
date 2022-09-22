@@ -1,5 +1,9 @@
 package vip.hyzt.questions;
 
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <h2>1640. 能否连接形成数组</h2>
  * <p>给你一个整数数组 arr ，数组中的每个整数 <strong>互不相同</strong> 。另有一个由整数数组构成的数组 pieces，其中的整数也 <strong>互不相同</strong>  。请你以 <strong>任意顺序</strong> 连接 pieces 中的数组以形成 arr 。但是，<strong>不允许</strong> 对每个数组 pieces[i] 中的整数重新排序。</p>
@@ -39,6 +43,7 @@ public class Topic1640CanFormArray {
 
     public boolean canFormArray(int[] arr, int[][] pieces) {
         int[] index = new int[101];
+        Arrays.fill(index, -1);
         for (int i = 0; i < pieces.length; i++) {
             index[pieces[i][0]] = i;
         }
