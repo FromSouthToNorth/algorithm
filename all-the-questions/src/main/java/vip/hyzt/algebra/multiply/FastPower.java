@@ -2,7 +2,13 @@ package vip.hyzt.algebra.multiply;
 
 /**
  * <h2>快速幂</h2>
- * <p></p>
+ * <p>x<sup>y</sup> mod m</p>
+ * <h3>示例1：</h3>
+ * <pre>
+ *     输入：x=2, y=10, m=9
+ *     输出：7
+ *     解释：2<sup>10</sup> % 9 = 7
+ * </pre>
  * @author hy
  */
 public class FastPower {
