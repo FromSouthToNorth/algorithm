@@ -1,4 +1,4 @@
-package vip.hyzt.questions.trie;
+package vip.hyzt.trie;
 
 import java.util.Arrays;
 

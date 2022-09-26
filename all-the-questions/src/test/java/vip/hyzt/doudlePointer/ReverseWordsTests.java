@@ -1,7 +1,7 @@
-package vip.hyzt.questions.doudlePointer;
+package vip.hyzt.doudlePointer;
 
 import org.junit.Test;
-import vip.hyzt.questions.doublePointer.ReverseWords;
+import vip.hyzt.doublePointer.ReverseWords;
 
 public class ReverseWordsTests {
 

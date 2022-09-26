@@ -1,6 +1,7 @@
-package vip.hyzt.questions.backpack;
+package vip.hyzt.backpack;
 
 import org.junit.Test;
+import vip.hyzt.backpack.Bags;
 
 public class BagsTests {
 

@@ -1,7 +1,7 @@
-package vip.hyzt.questions.doudlePointer;
+package vip.hyzt.doudlePointer;
 
 import org.junit.Test;
-import vip.hyzt.questions.doublePointer.SortedSquares;
+import vip.hyzt.doublePointer.SortedSquares;
 
 import java.util.Arrays;
 

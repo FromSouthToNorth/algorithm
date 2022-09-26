@@ -1,6 +1,6 @@
 package vip.hyzt.questions;
 
-import vip.hyzt.questions.segmentTree.SegmentTree;
+import vip.hyzt.segmentTree.SegmentTree;
 
 /**
  * <h2>1893. 检查是否区域内所有整数都被覆盖</h2>

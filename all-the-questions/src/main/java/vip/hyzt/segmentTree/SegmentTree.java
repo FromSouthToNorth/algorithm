@@ -1,4 +1,4 @@
-package vip.hyzt.questions.segmentTree;
+package vip.hyzt.segmentTree;
 
 import java.util.Arrays;
 

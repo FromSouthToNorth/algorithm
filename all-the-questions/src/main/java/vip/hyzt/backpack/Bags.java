@@ -1,4 +1,4 @@
-package vip.hyzt.questions.backpack;
+package vip.hyzt.backpack;
 
 /**
  * 0-1背包问题母代码(二维)

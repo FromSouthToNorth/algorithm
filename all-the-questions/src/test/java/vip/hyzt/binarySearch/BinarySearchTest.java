@@ -1,6 +1,7 @@
-package vip.hyzt.questions.binarySearch;
+package vip.hyzt.binarySearch;
 
 import org.junit.Test;
+import vip.hyzt.binarySearch.BinarySearch;
 
 public class BinarySearchTest {
 

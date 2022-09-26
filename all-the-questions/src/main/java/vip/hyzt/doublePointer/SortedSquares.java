@@ -1,4 +1,4 @@
-package vip.hyzt.questions.doublePointer;
+package vip.hyzt.doublePointer;
 
 /**
  * <h2>977. 有序数组的平方</h2>

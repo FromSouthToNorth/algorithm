@@ -1,8 +1,7 @@
-package vip.hyzt.questions.trie;
+package vip.hyzt.trie;
 
 import org.junit.Test;
-
-import java.math.BigDecimal;
+import vip.hyzt.trie.Trie;
 
 public class TrieTests {
 

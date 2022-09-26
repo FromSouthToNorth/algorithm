@@ -1,4 +1,4 @@
-package vip.hyzt.questions.doublePointer;
+package vip.hyzt.doublePointer;
 
 /**
  * <h2>557.反转字符串种的单词 III</h2>

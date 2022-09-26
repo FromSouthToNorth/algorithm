@@ -1,4 +1,4 @@
-package vip.hyzt.questions.binarySearch;
+package vip.hyzt.binarySearch;
 
 public class Topic33Search {
 

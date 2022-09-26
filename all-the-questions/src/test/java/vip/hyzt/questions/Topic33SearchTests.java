@@ -1,7 +1,7 @@
 package vip.hyzt.questions;
 
 import org.junit.Test;
-import vip.hyzt.questions.binarySearch.Topic33Search;
+import vip.hyzt.binarySearch.Topic33Search;
 
 public class Topic33SearchTests {
 
