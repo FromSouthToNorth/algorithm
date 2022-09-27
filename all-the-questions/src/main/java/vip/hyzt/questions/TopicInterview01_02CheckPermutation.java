@@ -1,5 +1,8 @@
 package vip.hyzt.questions;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * <h2>面试题 01.02. 判定是否互为字符重排</h2>
  * <p>给定两个字符串 s1 和 s2，请编写一个程序，确定其中一个字符串的字符重新排列后，能否变成另一个字符串。</p>
@@ -51,11 +54,11 @@ package vip.hyzt.questions;
 public class TopicInterview01_02CheckPermutation {
 
     public boolean checkPermutation(String s1, String s2) {
-        int[] count = new int[26];
         int n = s1.length();
         if (n != s2.length()) {
             return false;
         }
+        int[] count = new int[26];
         for (int i = 0; i < n; i++) {
             count[s1.charAt(i) - 'a']++;
             count[s2.charAt(i) - 'a']--;
