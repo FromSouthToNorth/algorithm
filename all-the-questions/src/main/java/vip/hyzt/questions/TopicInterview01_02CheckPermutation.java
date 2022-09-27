@@ -19,6 +19,7 @@ package vip.hyzt.questions;
  *     <li>0 <= len(s2) <= 100</li>
  * </ul>
  * <h3>js</h3>
+ * <p><a href="https://tool.oschina.net/commons?type=4">ASCII</a></p>
  * <pre>
  * function checkPermutation(s1, s2) {
  *   let table = new Array(26);
