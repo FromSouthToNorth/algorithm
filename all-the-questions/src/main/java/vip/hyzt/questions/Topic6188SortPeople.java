@@ -31,16 +31,29 @@ import java.util.Map;
  * </ul>
  * <h3>js</h3>
  * <pre>
- * var sortPeople = function(names, heights) {
- *   const hash = []
- *   for(let i = 0; i < names.length; i++) {
- *     hash.push({
- *       name :names[i],
+ * function sortPeople(names, heights) {
+ *   const { length } = names;
+ *   let array = [];
+ *   for (let i = 0; i < length; i++) {
+ *     array.push({
+ *       name: names[i],
  *       height: heights[i]
- *     })
+ *     });
  *   }
- *   return hash.sort((a, b)=> b.height - a.height).map((item)=> item.name)
- * };
+ *   array.sort((o, b) => {
+ *     return b.height - o.height;
+ *   });
+ *   for(let i = 0; i < length; i++) {
+ *     names[i] = array[i].name;
+ *   }
+ *   return names;
+ * }
+ * let names = ["Mary","John","Emma"];
+ * let heights = [180, 165, 170];
+ * let result = sortPeople(names, heights);
+ * for (const name of result) {
+ *   console.log(name);
+ * }
  * </pre>
  * @see <a href="https://leetcode.cn/problems/sort-the-people">https://leetcode.cn/problems/sort-the-people</a>
  * @author 力扣（LeetCode）
