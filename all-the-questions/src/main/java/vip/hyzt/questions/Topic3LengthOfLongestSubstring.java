@@ -15,6 +15,26 @@ import java.util.Map;
  * 输入: s = "bbbbb"<br>
  * 输出: 1<br/>
  * 解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。<br/>
+ * <h3>js</h3>
+ * <pre>
+ * function lengthOfLongestSubstring(s) {
+ *   let n = s.length, start = 0, end = 0, length = 0, max = 0;
+ *   let table = Array(256).fill(-1);
+ *   while (end < n) {
+ *     let ascii = s.charCodeAt(end);
+ *     if (table[ascii] >= start) {
+ *       start = table[ascii] + 1;
+ *       length = end - start;
+ *     }
+ *     table[ascii] = end;
+ *     end++;
+ *     length++;
+ *     max = Math.max(max, length);
+ *   }
+ *   return max;
+ * }
+ * console.log(lengthOfLongestSubstring("abcabcbb"));
+ * </pre>
  * @see <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/</a>
  * @author 力扣（LeetCode）
  * @author hy
