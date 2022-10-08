@@ -98,7 +98,7 @@ public static int hashSlidingWindow(String str) {
         result = Math.max(result, length);
     }
     
-    return result'
+    return result;
 }
 ~~~
 ### 利用桶替代 HashMap
