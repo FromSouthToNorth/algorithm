@@ -26,6 +26,43 @@ package vip.hyzt.questions;
  *     <li>2 <= word.length <= 100</li>
  *     <li>word 只包含小写英文字母。</li>
  * </ul>
+ * <h3>js</h3>
+ * <pre>
+ * const equalFrequency = function(word) {
+ *   for (let i = 0; i < word.length; i++) {
+ *     if (ok(word, i)) {
+ *       return true;
+ *     }
+ *   }
+ *   return false;
+ * }
+ * const ok = function(s, k) {
+ *   const table = new Array(26).fill(0);
+ *   for (let i = 0; i < s.length; i++) {
+ *     if (i != k) {
+ *       table[s.charCodeAt(i) - 97]++;
+ *     }
+ *   }
+ *   let pre = -1;
+ *   for (const j of table) {
+ *     if (j > 0) {
+ *       if (pre == -1) {
+ *         pre = j;
+ *       }
+ *       else {
+ *         if (j != pre) {
+ *           return false;
+ *         }
+ *       }
+ *     }
+ *   }
+ *   return true;
+ * }
+ * const words = ["abcc", "aazz", "aaccbbb", "ababcd", "ababc", "yzssyaazs"];
+ * for (let i =0; i < words.length; i++) {
+ *   console.log(equalFrequency(words[i]));
+ * }
+ * </pre>
  * @see <a href="https://leetcode.cn/problems/remove-letter-to-equalize-frequency">https://leetcode.cn/problems/remove-letter-to-equalize-frequency</a>
  * @author 力扣（LeetCode）
  * @author hy
