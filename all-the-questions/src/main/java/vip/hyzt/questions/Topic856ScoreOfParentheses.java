@@ -36,6 +36,27 @@ import java.util.Deque;
  *     <li>S 是平衡括号字符串，且只含有 ( 和 ) 。</li>
  *     <li>2 <= S.length <= 50</li>
  * </ol>
+ * <h3>js</h3>
+ * <pre>
+ * const scoreOfParentheses = function(s) {
+ *   const deque = [];
+ *   deque.push(0);
+ *   for (const c of [...s]) {
+ *     if (c === '(') {
+ *       deque.push(0);
+ *     }
+ *     else {
+ *       let cur = deque.pop();
+ *       deque.push(deque.pop() + Math.max(cur * 2, 1));
+ *     }
+ *   }
+ *   return deque.pop();
+ * }
+ * const s = ["()", "(())", "()()", "(()(()))"];
+ * for (const s1 of s) {
+ *   console.log(scoreOfParentheses(s1));
+ * }
+ * </pre>
  * @see <a href="https://leetcode.cn/problems/score-of-parentheses/">https://leetcode.cn/problems/score-of-parentheses/</a>
  * @author 力扣（LeetCode）
  * @author hy
