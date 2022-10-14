@@ -50,7 +50,7 @@ import java.util.stream.IntStream;
  *     <li>logs[i].length == 2</li>
  *     <li>0 <= idi <= n - 1</li>
  *     <li>1 <= leaveTime<sub>i</sub> <= 500</li>
- *     <li>idi != id<sub>i</sub> + 1</li>
+ *     <li>id<sub>i</sub> != id<sub>i</sub> + 1</li>
  *     <li>leaveTime<sub>i</sub> 按严格递增顺序排列</li>
  * </ul>
  * @see <a href="https://leetcode.cn/problems/the-employee-that-worked-on-the-longest-task/">https://leetcode.cn/problems/the-employee-that-worked-on-the-longest-task/</a>
