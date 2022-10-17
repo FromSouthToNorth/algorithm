@@ -34,8 +34,25 @@ package vip.hyzt.questions;
 public class Topic2444CountSubarrays {
 
     public long countSubarrays(int[] nums, int minK, int maxK) {
+        int n = nums.length;
         long min = -1, max = -1, index = -1, count = 0;
-        for (int i = 0; i < nums.length; i++) {
+//        for (int i = 0; i < n; i++) {
+//            int num = nums[i];
+//            if (num < minK || num > maxK) {
+//                index = i;
+//                continue;
+//            }
+//            if (num == minK) {
+//                min = i;
+//            }
+//            if (num == maxK) {
+//                max = i;
+//            }
+//            if (min > index && max > index) {
+//                count += Math.min(min, max) - index;
+//            }
+//        }
+        for (int i = 0; i < n; i++) {
             count += Math.max(0, Math.min(min = nums[i] == minK ? i : min, max = nums[i] == maxK ? i : max)
                     - (index = nums[i] < minK || nums[i] > maxK ? i : index));
         }
