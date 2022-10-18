@@ -31,29 +31,29 @@ public class Topic206ReverseList {
 
     /**
      * <pre>
-     *     prev curr
-     *      ↓    ↓
-     *     null  1 → 2 → 3 → 4 → 5 → null
+     *     prev curr next
+     *      ↓    ↓    ↓
+     *     null  1 →  2 → 3 → 4 → 5 → null
      *
-     *           prev curr
-     *            ↓    ↓
-     *     null ← 1    2 → 3 → 4 → 5 → null
+     *           prev curr next
+     *            ↓    ↓    ↓
+     *     null ← 1    2 →  3 → 4 → 5 → null
      *
-     *              prev curr
-     *                ↓   ↓
-     *     null ← 1 ← 2   3 → 4 → 5
+     *               prev curr next
+     *                ↓    ↓    ↓
+     *     null ← 1 ← 2    3 →  4 → 5
      *
-     *                  prev curr
-     *                    ↓   ↓
-     *     null ← 1 ← 2 ← 3   4 →  → 5 → null
+     *                   prev curr next
+     *                    ↓    ↓    ↓
+     *     null ← 1 ← 2 ← 3    4 →  5 → null
      *
      *
-     *                      prev curr
-     *                        ↓   ↓
-     *     null ← 1 ← 2 ← 3 ← 4   5 → null
+     *                       prev curr next
+     *                        ↓    ↓    ↓
+     *     null ← 1 ← 2 ← 3 ← 4    5 → null
      *
-     *                          prev curr
-     *                            ↓   ↓
+     *                           prev curr next
+     *                            ↓    ↓
      *     null ← 1 ← 2 ← 3 ← 4 ← 5  null
      * </pre>
      */
