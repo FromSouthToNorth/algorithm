@@ -16,7 +16,7 @@ package vip.hyzt.questions;
  * </pre>
  * <h3>提示：</h3>
  * <li>给出的地址 address 是个有效的 IPv4 地址</li>
- * @see <a herf="https://leetcode.cn/problems/defanging-an-ip-address/">https://leetcode.cn/problems/defanging-an-ip-address/</a>
+ * @see <a href="https://leetcode.cn/problems/defanging-an-ip-address/">https://leetcode.cn/problems/defanging-an-ip-address/</a>
  * @author hy
  */
 public class Topic1108DefangIPaddr {

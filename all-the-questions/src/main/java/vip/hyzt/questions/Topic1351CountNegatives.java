@@ -28,17 +28,35 @@ package vip.hyzt.questions;
 public class Topic1351CountNegatives {
 
     public static int countNegatives(int[][] grid) {
-        int ans = 0;
-        for (int i = 0, j = grid[0].length - 1; i < grid.length && j >= 0;) {
-            if (grid[i][j] >= 0) {
-                i++;
+        int res = 0;
+//        for (int i = 0, j = grid[0].length - 1; i < grid.length && j >= 0;) {
+//            if (grid[i][j] >= 0) {
+//                i++;
+//            }
+//            else {
+//                ans += grid.length - i;
+//                j--;
+//            }
+//        }
+//        return res;
+        for (int[] g : grid) {
+            int n = g.length, left = 0, right = n - 1, index = -1;
+            while (left <= right) {
+                int mid = left + ((right - left) >> 1);
+                int num = g[mid];
+                if (num < 0) {
+                    index = mid;
+                    right = mid - 1;
+                }
+                else {
+                    left = mid + 1;
+                }
             }
-            else {
-                ans += grid.length - i;
-                j--;
+            if (index != -1) {
+                res += n - index;
             }
         }
-        return ans;
+        return res;
     }
 
 }
