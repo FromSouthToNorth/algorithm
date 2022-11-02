@@ -14,7 +14,7 @@ package vip.hyzt.questions;
  * @author 力扣（LeetCode）
  * @author hy
  */
-public class Topic17_11FindClosest {
+public class TopicInterview17_11FindClosest {
 
     public static int findClosest(String[] words, String word1, String word2) {
         int ans = words.length;
