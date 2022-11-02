@@ -1,5 +1,6 @@
 package vip.hyzt.questions;
 
+import java.util.Arrays;
 import java.util.TreeSet;
 
 /**
@@ -71,13 +72,29 @@ public class Topic2441FindMaxK {
 //            }
 //        }
 //        return res;
-        TreeSet<Integer> set = new TreeSet<>();
-        for (int num : nums) {
-            set.add(num);
-        }
-        for (int i : set) {
-            if (set.contains(-i)) {
-                return -i;
+//        TreeSet<Integer> set = new TreeSet<>();
+//        for (int num : nums) {
+//            set.add(num);
+//        }
+//        for (int i : set) {
+//            if (set.contains(-i)) {
+//                return -i;
+//            }
+//        }
+//        return -1;]
+
+        Arrays.sort(nums);
+        int n = nums.length, left = 0, right = n - 1;
+        while (left < right) {
+            int sum = nums[left] + nums[right];
+            if (sum == 0) {
+                return nums[right];
+            }
+            else if (sum > 0) {
+                right--;
+            }
+            else {
+                left++;
             }
         }
         return -1;
