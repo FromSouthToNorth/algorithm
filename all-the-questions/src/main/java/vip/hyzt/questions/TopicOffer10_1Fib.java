@@ -42,13 +42,13 @@ public class TopicOffer10_1Fib {
         //////  递归，复杂度随着 输入 n 的规模越大时间复杂度越高，因为存在着重复的计算.
 //        return fib(n - 1) + fib(n - 2) % MODE;
 
-//        int[] dp = new int[n + 1];
-//        dp[0] = 0;
-//        dp[1] = 1;
-//        for (int i = 2; i <= n; i++) {
-//            dp[i] = dp[i - 1] + dp[i - 2] % MODE;
-//        }
-//        return dp[n];
+        int[] dp = new int[n + 1];
+        dp[0] = 0;
+        dp[1] = 1;
+        for (int i = 2; i <= n; i++) {
+            dp[i] = dp[i - 1] + dp[i - 2] % MODE;
+        }
+        return dp[n];
 
 //        int a, b = 1, res = 0;
 //        for (int i = 2; i <= n; i++) {
@@ -57,9 +57,9 @@ public class TopicOffer10_1Fib {
 //            res = (a + b) % MODE;
 //        }
 //        return res;
-        int[][] base = {{1, 1}, {1, 0}};
-        int[][] res = fib(base, n - 1);
-        return res[0][0];
+//        int[][] base = {{1, 1}, {1, 0}};
+//        int[][] res = fib(base, n - 1);
+//        return res[0][0];
     }
 
     private int[][] fib(int[][] base, int power) {
