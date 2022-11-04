@@ -32,7 +32,7 @@ package vip.hyzt.questions;
  */
 public class TopicOffer10_1Fib {
 
-   private static final int mode = 1000000007;
+   private static final int MODE = 1000000007;
 
     public int fib(int n) {
         if (n < 2) {
@@ -40,13 +40,13 @@ public class TopicOffer10_1Fib {
         }
 
         //////  递归，复杂度随着 输入 n 的规模越大时间复杂度越高，因为存在着重复的计算.
-//        return fib(n - 1) + fib(n - 2) % mode;
+//        return fib(n - 1) + fib(n - 2) % MODE;
 
 //        int[] dp = new int[n + 1];
 //        dp[0] = 0;
 //        dp[1] = 1;
 //        for (int i = 2; i <= n; i++) {
-//            dp[i] = dp[i - 1] + dp[i - 2] % mode;
+//            dp[i] = dp[i - 1] + dp[i - 2] % MODE;
 //        }
 //        return dp[n];
 
@@ -54,7 +54,7 @@ public class TopicOffer10_1Fib {
 //        for (int i = 2; i <= n; i++) {
 //            a = b;
 //            b = res;
-//            res = (a + b) % mode;
+//            res = (a + b) % MODE;
 //        }
 //        return res;
         int[][] base = {{1, 1}, {1, 0}};
@@ -78,7 +78,7 @@ public class TopicOffer10_1Fib {
         int[][] c = new int[2][2];
         for (int i = 0; i < 2; i++) {
             for (int j = 0; j < 2; j++) {
-                c[i][j] = (int) (((long) a[i][0] * b[0][j] + (long) a[i][1] * b[1][j]) % mode);
+                c[i][j] = (int) (((long) a[i][0] * b[0][j] + (long) a[i][1] * b[1][j]) % MODE);
             }
         }
         return c;
