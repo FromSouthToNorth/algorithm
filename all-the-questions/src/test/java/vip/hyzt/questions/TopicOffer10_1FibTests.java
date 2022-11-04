@@ -7,12 +7,12 @@ public class TopicOffer10_1FibTests {
     @Test
     public void fib() {
         TopicOffer10_1Fib topicOffer10_1Fib = new TopicOffer10_1Fib();
-        long startTime = System.currentTimeMillis();
-        for (int i = 0; i <= 100; i++) {
-            System.out.printf("%d res: %d\n", i, topicOffer10_1Fib.fib(i));
+        for (int i = 0; i <= 67; i++) {
+            long startTime = System.currentTimeMillis();
+            int res = topicOffer10_1Fib.fib(i);
+            long endTime = System.currentTimeMillis();
+            System.out.printf("f(%d) res: %d \t\t run time %d ms\n", i, res, endTime - startTime);
         }
-        long endTime = System.currentTimeMillis();
-        System.out.printf("%dms\n", endTime - startTime);
     }
 
 }
