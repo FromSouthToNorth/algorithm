@@ -14,7 +14,6 @@ public class SortCompareTests {
         double v2 = SortCompare.timeRandInput(alg2, N, T);
         System.out.printf("For %d 随机双打\n %s is", N, alg1);
         System.out.printf(" %.1f 随机快于 %s\n", v2/v1, alg2);
-
     }
 
 }
