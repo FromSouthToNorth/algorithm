@@ -53,13 +53,22 @@ public class Topic2460ApplyOperations {
                 nums[i] = 0;
             }
         }
+//        for (int i = 0; i < n; i++) {
+//            for (int j = i; j < n && nums[i] == 0; j++) {
+//                if (nums[j] != 0) {
+//                    nums[i] = nums[j];
+//                    nums[j] = 0;
+//                }
+//            }
+//        }
+        int index = 0;
         for (int i = 0; i < n; i++) {
-            for (int j = i; j < n && nums[i] == 0; j++) {
-                if (nums[j] != 0) {
-                    nums[i] = nums[j];
-                    nums[j] = 0;
-                }
+            if (nums[i] > 0) {
+                nums[index++] = nums[i];
             }
+        }
+        for (; index < n; index++) {
+            nums[index] = 0;
         }
         return nums;
     }
