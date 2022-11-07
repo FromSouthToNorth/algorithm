@@ -46,27 +46,22 @@ import java.util.stream.IntStream;
 public class Topic2460ApplyOperations {
 
     public int[] applyOperations(int[] nums) {
-        int n = nums.length, m = 0;
-//        for (int i = 0; i < n; i++) {
-//            if (i + 1 < n && nums[i] > 0 && nums[i] == nums[i + 1]) {
-//                nums[m++] = nums[i] * 2;
-//                i++;
-//            }
-//            else if (nums[i] > 0) {
-//                nums[m++] = nums[i];
-//            }
-//        }
-//        for (int i = m; i < n; i++) {
-//            nums[i] = 0;
-//        }
-//        return nums;
+        int n = nums.length;
         for (int i = 1; i < n; i++) {
             if (nums[i - 1] == nums[i]) {
                 nums[i - 1] *= 2;
                 nums[i] = 0;
             }
         }
-        return IntStream.of(nums).boxed().sorted((o, p) -> p == 0 ? -1 : o == 0 ? 1 : 0).mapToInt(v -> v).toArray();
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n && nums[i] == 0; j++) {
+                if (nums[j] != 0) {
+                    nums[i] = nums[j];
+                    nums[j] = 0;
+                }
+            }
+        }
+        return nums;
     }
 
 }
