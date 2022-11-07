@@ -38,7 +38,9 @@ public class Topic442FindDuplicates {
         int n = nums.length;
         for (int i = 0; i < n; i++) {
             int t = nums[i];
-            if (t < 0 || t - 1 == i) continue;
+            if (t < 0 || t - 1 == i) {
+                continue;
+            }
             if (nums[t - 1] == t) {
                 ans.add(t);
                 nums[i] *= -1;

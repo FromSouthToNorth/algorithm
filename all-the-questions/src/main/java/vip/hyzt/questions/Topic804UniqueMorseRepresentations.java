@@ -54,7 +54,9 @@ public abstract class Topic804UniqueMorseRepresentations {
         Set<String> set = new HashSet<>();
         for (String word : words) {
             StringBuilder sb = new StringBuilder();
-            for (char c : word.toCharArray()) sb.append(CODE[c - 'a']);
+            for (char c : word.toCharArray()) {
+                sb.append(CODE[c - 'a']);
+            }
             set.add(sb.toString());
         }
         return set.size();

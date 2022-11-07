@@ -40,7 +40,9 @@ public class Topic883ProjectionArea {
         for (int i = 0; i < n; i++) {
             int a = 0, b = 0;
             for (int j = 0; j < n; j++) {
-                if (grid[i][j] > 0) ans1++;
+                if (grid[i][j] > 0) {
+                    ans1++;
+                }
                 a = Math.max(a, grid[i][j]);
                 b = Math.max(b, grid[j][i]);
             }

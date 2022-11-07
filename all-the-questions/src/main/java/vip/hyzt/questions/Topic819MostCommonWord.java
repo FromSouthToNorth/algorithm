@@ -1,9 +1,6 @@
 package vip.hyzt.questions;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * <h3>最常见的单词</h3>
@@ -38,20 +35,29 @@ public class Topic819MostCommonWord {
 
     public static String mostCommonWord(String paragraph, String[] banned) {
         Set<String> set = new HashSet<>();
-        for (String b : banned) set.add(b);
+        Collections.addAll(set, banned);
         char[] cs = paragraph.toCharArray();
         int n = cs.length;
         String ans = null;
         Map<String, Integer> map = new HashMap<>();
         for (int i = 0; i < n;) {
-            if (!Character.isLetter(cs[i]) && ++i >= 0) continue;
+            if (!Character.isLetter(cs[i])) {
+                ++i;
+                continue;
+            }
             int j = i;
-            while (j < n && Character.isLetter(cs[j])) j++;
+            while (j < n && Character.isLetter(cs[j])) {
+                j++;
+            }
             String sub = paragraph.substring(i, j).toLowerCase();
             i = j + 1;
-            if (set.contains(sub)) continue;
+            if (set.contains(sub)) {
+                continue;
+            }
             map.put(sub, map.getOrDefault(sub, 0) + 1);
-            if (ans == null || map.get(sub) > map.get(ans)) ans = sub;
+            if (ans == null || map.get(sub) > map.get(ans)) {
+                ans = sub;
+            }
         }
         return ans;
     }

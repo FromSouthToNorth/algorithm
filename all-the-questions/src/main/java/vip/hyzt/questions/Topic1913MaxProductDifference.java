@@ -41,7 +41,9 @@ public class Topic1913MaxProductDifference {
 
     static void sort(int[] nums, int lo, int hi) {
         int[] aux = new int[nums.length];
-        if (hi <= lo) return;
+        if (hi <= lo) {
+            return;
+        }
         int mid = lo + (hi - lo) / 2 ;
         sort(nums, lo, mid);
         sort(nums, mid + 1, hi);

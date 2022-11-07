@@ -47,7 +47,6 @@ import java.util.List;
  */
 public class Topic2089TargetIndices {
 
-
     public static List<Integer> targetIndices1(int[] nums, int target) {
         Arrays.sort(nums);
         List<Integer> ans = new ArrayList<>();

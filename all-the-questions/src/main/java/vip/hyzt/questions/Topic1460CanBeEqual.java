@@ -53,7 +53,9 @@ public class Topic1460CanBeEqual {
             map.put(i, map.getOrDefault(i, 0) - 1);
         }
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            if (entry.getValue() != 0) return false;
+            if (entry.getValue() != 0) {
+                return false;
+            }
         }
         return true;
     }
@@ -65,7 +67,9 @@ public class Topic1460CanBeEqual {
             cnt[arr[i]]--;
         }
         for (int i : cnt) {
-            if (i != 0) return false;
+            if (i != 0) {
+                return false;
+            }
         }
         return true;
     }

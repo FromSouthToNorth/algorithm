@@ -49,7 +49,9 @@ public class Topic1051HeightChecker {
         int[] t = heights.clone();
         Arrays.sort(t);
         for (int i = 0; i < n; i++) {
-            if (heights[i] != t[i]) ans++;
+            if (heights[i] != t[i]) {
+                ans++;
+            }
         }
         return ans;
     }

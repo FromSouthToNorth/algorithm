@@ -43,14 +43,20 @@ public abstract class Topic954CanReorderDoubled {
     public static boolean queueCanReorderDoubled(int[] arr) {
         Arrays.fill(cnts, 0);
         PriorityQueue<Integer> queue = new PriorityQueue<>((a,b) -> Math.abs(a) - Math.abs(b));
-        for (int i : arr) queue.add(i);
+        for (int i : arr) {
+            queue.add(i);
+        }
         while (!queue.isEmpty()) {
             int x = queue.poll(), t = x * 2;
-            if (cnts[x + M] != 0 && --cnts[x + M] >= 0) continue;
+            if (cnts[x + M] != 0 && --cnts[x + M] >= 0) {
+                continue;
+            }
             cnts[t + M]++;
         }
         for (int i = 0; i < M * 2; i++) {
-            if (cnts[i] != 0) return false;
+            if (cnts[i] != 0) {
+                return false;
+            }
         }
         return true;
     }

@@ -53,13 +53,19 @@ public class Topic929NumUniqueEmails {
             boolean ok = true;
             while (n < email.length()) {
                 char c = email.charAt(n);
-                if (c == '@') break;
+                if (c == '@') {
+                    break;
+                }
                 if (c == '.') {
                     ++n;
                     continue;
                 }
-                if (c == '+') ok = false;
-                if (ok) sb.append(c);
+                if (c == '+') {
+                    ok = false;
+                }
+                if (ok) {
+                    sb.append(c);
+                }
                 n++;
             }
             set.add(sb.append(email.substring(n)).toString());

@@ -33,7 +33,9 @@ public class Topic687LongestUnivaluePath {
         return max;
     }
     int dfs(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) {
+            return 0;
+        }
         int ans = 0, cur = 0, l = dfs(root.left), r = dfs(root.right);
         if (root.left != null && root.left.val == root.val) {
             ans = l + 1; cur += l + 1;

@@ -52,7 +52,9 @@ public abstract class Topic2104SubArrayRanges {
     public static long subArrayRanges(int[] nums) {
         int n = nums.length;
         int[][][] f = new int[n][n][2];
-        for (int i = 0; i < n; i++) f[i][i][0] = f[i][i][1] = nums[i];
+        for (int i = 0; i < n; i++) {
+            f[i][i][0] = f[i][i][1] = nums[i];
+        }
         for (int len = 2; len <= n; len++) {
             for (int l = 0; l + len - 1 < n; l++) {
                 int r = l + len - 1;

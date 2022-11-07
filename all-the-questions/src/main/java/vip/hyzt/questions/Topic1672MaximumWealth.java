@@ -42,10 +42,12 @@ package vip.hyzt.questions;
 public abstract class Topic1672MaximumWealth {
 
     public static int maximumWealth(int[][] accounts) {
-        int column = accounts.length, row = accounts[0].length, ans = 0;
-        for (int i = 0; i < column; i++) {
+        int row = accounts[0].length, ans = 0;
+        for (int[] account : accounts) {
             int cur = 0;
-            for (int j = 0; j < row; j++) cur += accounts[i][j];
+            for (int j = 0; j < row; j++) {
+                cur += account[j];
+            }
             ans = Math.max(cur, ans);
         }
         return ans;

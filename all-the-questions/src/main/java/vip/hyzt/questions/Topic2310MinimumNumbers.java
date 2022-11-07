@@ -46,18 +46,26 @@ package vip.hyzt.questions;
 public class Topic2310MinimumNumbers {
 
     public static int minimumNumbers1(int num, int k) {
-        if (num == 0) return 0;
+        if (num == 0) {
+            return 0;
+        }
         for (int i = 1; i <= num; i++) {
             int t = num - i * k;
-            if (t >= 0 && t % 10 == 0) return i;
+            if (t >= 0 && t % 10 == 0) {
+                return i;
+            }
         }
         return -1;
     }
 
     public static int minimumNumbers2(int num, int k) {
-        if (num == 0) return 0;
+        if (num == 0) {
+            return 0;
+        }
         for (int i = 1, j = num - k; i <= 10 && j >= 0; i++, j -= k) {
-            if (j % 10 == 0) return i;
+            if (j % 10 == 0) {
+                return i;
+            }
         }
         return -1;
     }

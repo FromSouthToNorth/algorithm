@@ -39,8 +39,12 @@ public class Topic513FindBottomLeftValue {
             ans = d.peek().val;
             while (sz-- > 0) {
                 TreeNode poll = d.pollFirst();
-                if (poll.left != null) d.addLast(poll.left);
-                if (poll.right != null) d.addLast(poll.right);
+                if (poll.left != null) {
+                    d.addLast(poll.left);
+                }
+                if (poll.right != null) {
+                    d.addLast(poll.right);
+                }
             }
         }
         return ans;
@@ -56,7 +60,9 @@ public class Topic513FindBottomLeftValue {
     }
 
      static void dfs(TreeNode root, int high) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         high++;
         dfs(root.left, high);
         dfs(root.right, high);

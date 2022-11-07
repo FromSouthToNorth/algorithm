@@ -46,13 +46,21 @@ public class Topic821ShortestToChar {
         int[] ans = new int[length];
         Arrays.fill(ans, length + 1);
         for (int i = 0, j = -1; i < length; i++) {
-            if (s.charAt(i) == c) j = i;
-            if (j != -1) ans[i] = i - j;
+            if (s.charAt(i) == c) {
+                j = i;
+            }
+            if (j != -1) {
+                ans[i] = i - j;
+            }
         }
 
         for (int i = length - 1, j = -1; i>= 0; i--) {
-            if (s.charAt(i) == c) j = i;
-            if (j != -1) ans[i] = Math.min(ans[i], j - i);
+            if (s.charAt(i) == c) {
+                j = i;
+            }
+            if (j != -1) {
+                ans[i] = Math.min(ans[i], j - i);
+            }
         }
         return ans;
     }

@@ -28,8 +28,12 @@ package vip.hyzt.questions;
 public class Topic1137Tribonacci {
 
     public static int tribonacci1(int n) {
-        if (n == 0) return 0;
-        if (n == 1 || n == 2) return 1;
+        if (n == 0) {
+            return 0;
+        }
+        if (n == 1 || n == 2) {
+            return 1;
+        }
         int a = 0, b = 1, c = 1;
         for (int i = 3; i <= n; i++) {
             int d = a + b + c;
@@ -42,9 +46,15 @@ public class Topic1137Tribonacci {
 
     static int[] cache = new int[40];
     public static int tribonacci2(int n) {
-        if (n == 0) return 0;
-        if (n ==1 || n == 2) return 1;
-        if (cache[n] != 0) return cache[n];
+        if (n == 0) {
+            return 0;
+        }
+        if (n ==1 || n == 2) {
+            return 1;
+        }
+        if (cache[n] != 0) {
+            return cache[n];
+        }
         cache[n] = tribonacci2(n - 1) + tribonacci2(n - 2) + tribonacci2(n - 3);
         return cache[n];
     }
@@ -72,8 +82,12 @@ public class Topic1137Tribonacci {
         return c;
     }
     public static int tribonacci3(int n) {
-        if (n == 0 ) return 0;
-        if (n == 1 || n == 2) return 1;
+        if (n == 0 ) {
+            return 0;
+        }
+        if (n == 1 || n == 2) {
+            return 1;
+        }
         int[][] ans = new int[][] {
                 {1,0,0},
                 {0,1,0},
@@ -86,7 +100,9 @@ public class Topic1137Tribonacci {
         };
         int k = n - 2;
         while (k != 0) {
-            if ((k & 1) != 0) ans = mul(ans, mat);
+            if ((k & 1) != 0) {
+                ans = mul(ans, mat);
+            }
             mat = mul(mat, mat);
             k >>= 1;
         }

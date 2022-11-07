@@ -34,7 +34,9 @@ public class Topic1502CanMakeArithmeticProgression {
         Arrays.sort(arr);
         int num = arr[1] - arr[0];
         for (int i = 1; i < arr.length; i++) {
-            if ((arr[i] - arr[i - 1]) != num) return false;
+            if ((arr[i] - arr[i - 1]) != num) {
+                return false;
+            }
         }
         return true;
     }

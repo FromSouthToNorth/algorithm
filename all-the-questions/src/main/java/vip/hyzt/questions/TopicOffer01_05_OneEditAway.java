@@ -25,8 +25,12 @@ public class TopicOffer01_05_OneEditAway {
 
     public static boolean oneEditAway(String first, String second) {
         int n = first.length(), m = second.length();
-        if (Math.abs(n - m) > 1) return false;
-        if (n > m) return oneEditAway(second, first);
+        if (Math.abs(n - m) > 1) {
+            return false;
+        }
+        if (n > m) {
+            return oneEditAway(second, first);
+        }
         int i = 0, j = 0, cnt = 0;
         while (i < n && j < m && cnt <= 1) {
             char c1 = first.charAt(i), c2 = second.charAt(j);
@@ -35,11 +39,10 @@ public class TopicOffer01_05_OneEditAway {
             }
             else {
                 if (n == m) {
-                    i++; j++; cnt++;
+                    i++;
                 }
-                else {
-                    j++; cnt++;
-                }
+                j++;
+                cnt++;
             }
         }
         return cnt <= 1;

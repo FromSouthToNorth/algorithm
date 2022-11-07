@@ -1,6 +1,7 @@
 package vip.hyzt.questions;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,9 +33,7 @@ public abstract class Topic720LongestWord {
     public static String longestWordSimulation(String[] words) {
         String ans = "";
         Set<String> set = new HashSet<>();
-        for (String s : words) {
-            set.add(s);
-        }
+        Collections.addAll(set, words);
         for (String s : set) {
             int n = s.length(), m = ans.length();
             if (n < m) {
@@ -44,10 +43,11 @@ public abstract class Topic720LongestWord {
                 continue;
             }
             boolean ok = true;
-            for (int i = 1; i <= n && ok; i++) {
+            for (int i = 1; i <= n; i++) {
                 String sub = s.substring(0, i);
                 if (!set.contains(sub)) {
                     ok = false;
+                    break;
                 }
             }
             if (ok) {

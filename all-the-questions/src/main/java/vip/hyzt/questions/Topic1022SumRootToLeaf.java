@@ -38,8 +38,12 @@ public class Topic1022SumRootToLeaf {
 
     static int dfs(TreeNode root, int cur) {
         int ans = 0, ncur = (cur << 1) + root.val;
-        if (root.left != null) ans += dfs(root.left, ncur);
-        if (root.right != null) ans += dfs(root.right, ncur);
+        if (root.left != null) {
+            ans += dfs(root.left, ncur);
+        }
+        if (root.right != null) {
+            ans += dfs(root.right, ncur);
+        }
         return root.left == null && root.right == null ? ncur : ans;
     }
 
@@ -57,7 +61,9 @@ public class Topic1022SumRootToLeaf {
                 poll.right.val = (poll.val << 1) + poll.right.val;
                 stack.addLast(poll.right);
             }
-            if (poll.left == null && poll.right == null) ans += poll.val;
+            if (poll.left == null && poll.right == null) {
+                ans += poll.val;
+            }
         }
         return ans;
     }

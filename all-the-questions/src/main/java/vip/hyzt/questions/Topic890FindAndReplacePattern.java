@@ -41,9 +41,13 @@ public class Topic890FindAndReplacePattern {
                 if (map[c1] == -1 && vis[c2] == 0) {
                     map[c1] = c2; vis[c2] = 1;
                 }
-                else if (map[c1] != c2) ok = false;
+                else if (map[c1] != c2) {
+                    ok = false;
+                }
             }
-            if (ok) ans.add(w);
+            if (ok) {
+                ans.add(w);
+            }
         }
         return ans;
     }

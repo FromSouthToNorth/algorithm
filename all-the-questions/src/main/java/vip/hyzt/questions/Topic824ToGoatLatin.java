@@ -48,7 +48,9 @@ public class Topic824ToGoatLatin {
        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n;) {
             int j = i;
-            while (j < n && s.charAt(j) != ' ') j++;
+            while (j < n && s.charAt(j) != ' ') {
+                j++;
+            }
             if ("aeiouAEIOU".indexOf(s.charAt(i)) >= 0) {
                 sb.append(s, i, j).append("ma");
             }
@@ -58,7 +60,9 @@ public class Topic824ToGoatLatin {
             sb.append(lat);
             lat += "a";
             i = j + 1;
-            if (i < n) sb.append(" ");
+            if (i < n) {
+                sb.append(" ");
+            }
         }
        return sb.toString();
     }

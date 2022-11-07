@@ -21,8 +21,12 @@ public class TopicInterview17_11FindClosest {
         int start = -1;
         int end = -1;
         for (int i = 0; i < words.length; i++) {
-            if (words[i].equals(word1)) start = i;
-            if (words[i].equals(word2)) end = i;
+            if (words[i].equals(word1)) {
+                start = i;
+            }
+            if (words[i].equals(word2)) {
+                end = i;
+            }
             if (start >= 0 && end >= 0) {
                 ans = Math.min(ans, Math.abs(start - end));
             }

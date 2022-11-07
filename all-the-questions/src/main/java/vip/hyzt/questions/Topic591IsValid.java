@@ -18,7 +18,9 @@ public class Topic591IsValid {
         int n = code.length(), i = 0;
         while (i < n) {
             if (i + 8 < n && code.substring(i, i + 9).equals(CDATA1)) {
-                if (i == 0) return false;
+                if (i == 0) {
+                    return false;
+                }
                 int j = i + 9;
                 boolean ok = false;
                 while (j < n && !ok) {
@@ -28,29 +30,48 @@ public class Topic591IsValid {
                         j++;
                     }
                 }
-                if (!ok) return false;
+                if (!ok) {
+                    return false;
+                }
                 i = j;
-            } else if (code.charAt(i) == '<') {
-                if (i == n - 1) return false;
+            }
+            else if (code.charAt(i) == '<') {
+                if (i == n - 1) {
+                    return false;
+                }
                 boolean isEnd = code.charAt(i + 1) == '/';
                 int p = isEnd ? i + 2 : i + 1, j = p;
                 while (j < n && code.charAt(j) != '>') {
-                    if (!Character.isUpperCase(code.charAt(j))) return false;
+                    if (!Character.isUpperCase(code.charAt(j))) {
+                        return false;
+                    }
                     j++;
                 }
-                if (j == n) return false;
+                if (j == n) {
+                    return false;
+                }
                 int len = j - p;
-                if (len < 1 || len > 9) return false;
+                if (len < 1 || len > 9) {
+                    return false;
+                }
                 String tag = code.substring(p, j);
                 i = j + 1;
                 if (!isEnd) {
                     d.addLast(tag);
-                } else {
-                    if (d.isEmpty() || !d.pollLast().equals(tag)) return false;
-                    if (d.isEmpty() && i < n) return false;
                 }
-            } else {
-                if (i == 0) return false;
+                else {
+                    if (d.isEmpty() || !d.pollLast().equals(tag)) {
+                        return false;
+                    }
+                    if (d.isEmpty() && i < n) {
+                        return false;
+                    }
+                }
+            }
+            else {
+                if (i == 0) {
+                    return false;
+                }
                 i++;
             }
         }

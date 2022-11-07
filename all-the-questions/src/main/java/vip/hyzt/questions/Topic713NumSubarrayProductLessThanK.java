@@ -27,10 +27,14 @@ public class Topic713NumSubarrayProductLessThanK {
 
     public static int numSubarrayProductLessThanK(int[] nums, int k) {
         int n = nums.length, ans = 0, cur = 1;
-        if (k <= 1) return 0;
+        if (k <= 1) {
+            return 0;
+        }
         for (int i = 0, j = 0; i < n; i++) {
              cur *= nums[i];
-             while (cur >= k) cur /= nums[j++];
+             while (cur >= k) {
+                 cur /= nums[j++];
+             }
              ans += i - j + 1;
         }
         return ans;
