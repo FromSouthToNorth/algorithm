@@ -52,9 +52,10 @@ package vip.hyzt.questions;
  * console.log(countConsistentStrings("abc", ["a", "b", "c", "ab", "ac", "bc", "abc"]));
  * console.log(countConsistentStrings("cad", ["cc", "acd", "b", "ba", "bac", "bad", "ac", "d"]));
  * </pre>
- * @see <a href="https://leetcode.cn/problems/count-the-number-of-consistent-strings/">https://leetcode.cn/problems/count-the-number-of-consistent-strings/</a>
+ *
  * @author 力扣（LeetCode）
  * @author hy
+ * @see <a href="https://leetcode.cn/problems/count-the-number-of-consistent-strings/">https://leetcode.cn/problems/count-the-number-of-consistent-strings/</a>
  */
 public class Topic1684CountConsistentStrings {
 
@@ -72,7 +73,8 @@ public class Topic1684CountConsistentStrings {
         for (char c : allowed.toCharArray()) {
             cur[c - 'a']++;
         }
-        out: for (String word : words) {
+        out:
+        for (String word : words) {
             for (char c : word.toCharArray()) {
                 if (cur[c - 'a'] == 0) {
                     continue out;
