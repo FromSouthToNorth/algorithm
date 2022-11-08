@@ -60,17 +60,13 @@ public class Topic1684CountConsistentStrings {
 
     public int countConsistentStrings(String allowed, String[] words) {
         int res = 0;
-//        for (String word : words) {
-//            boolean flag = true;
-//            for (int i = 0; i < word.length(); i++) {
-//                flag = allowed.contains(word.charAt(i) + "");
-//                if (!flag) {
-//                    break;
+//        out: for (String word : words) {
+//            for (char c : word.toCharArray()) {
+//                if (!allowed.contains(c + "")) {
+//                    continue out;
 //                }
 //            }
-//            if (flag) {
-//                res++;
-//            }
+//            res++;
 //        }
         int[] cur = new int[26];
         for (char c : allowed.toCharArray()) {
