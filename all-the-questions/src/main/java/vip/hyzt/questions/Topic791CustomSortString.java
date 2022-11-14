@@ -27,6 +27,7 @@ package vip.hyzt.questions;
  * </ul>
  * @author 力扣（LeetCode）
  * @author hy
+ * @see <a href="https://leetcode.cn/problems/custom-sort-string/">https://leetcode.cn/problems/custom-sort-string/</a>
  */
 public class Topic791CustomSortString {
 
