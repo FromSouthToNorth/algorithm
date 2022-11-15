@@ -45,8 +45,7 @@ public class Topic1710MaximumUnits {
 
     public int maximumUnits(int[][] boxTypes, int truckSize) {
         int res = 0;
-        Arrays.sort(boxTypes, (a, b) -> b[1] - a[0]);
-        System.out.printf("%s\n", Arrays.deepToString(boxTypes));
+        Arrays.sort(boxTypes, (a, b) -> b[1] - a[1]);
         for (int[] boxType : boxTypes) {
             int numberOfBoxes = boxType[0];
             int numberOfUnitsPerBox = boxType[1];
