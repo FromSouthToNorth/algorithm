@@ -1,7 +1,5 @@
 package vip.hyzt.questions;
 
-import java.util.Arrays;
-
 /**
  * <h1>2472. 不重叠回文子字符串的最大数目</h1>
  * <p>给你一个字符串 s 和一个 <strong>正</strong> 整数 k 。</p>
