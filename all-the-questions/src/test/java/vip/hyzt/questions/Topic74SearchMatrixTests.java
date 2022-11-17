@@ -13,6 +13,8 @@ public class Topic74SearchMatrixTests {
         System.out.printf("matrix: %s target: %d res: %b\n", Arrays.deepToString(matrix1), 120, topic74SearchMatrix.searchMatrix(matrix1, 120));
         int[][] matrix2 = {{-(int) 10e4, 3, 5, 7, 10}, {10, 11, 12, 13, 20}, {23, 24, 26, 30, 70}, {66, 78, 99, 100, 120}};
         System.out.printf("matrix: %s target: %d res: %b\n", Arrays.deepToString(matrix2), 120, topic74SearchMatrix.searchMatrix(matrix2, 120));
+        int[][] matrix3 = {{1, 3, 5, 7, 200}, {10, 11, 12, 13, 17}, {23, 24, 26, 30, 100}, {66, 78, 99, 100, 120}};
+        System.out.printf("matrix: %s target: %d res: %b\n", Arrays.deepToString(matrix3), 120, topic74SearchMatrix.searchMatrix(matrix3, 120));
     }
 
 }

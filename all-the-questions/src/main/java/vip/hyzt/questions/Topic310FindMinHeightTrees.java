@@ -76,7 +76,9 @@ public abstract class Topic310FindMinHeightTrees {
     static int dfs1(int u, int fa) {
         for (int i = he[u]; i != -1; i = ne[i]) {
             int j = e[i];
-            if (j == fa) continue;
+            if (j == fa) {
+                continue;
+            }
             int sub = dfs1(j, u) + 1;
             if (sub > f1[u]) {
                 f2[u] = f1[u];
@@ -93,9 +95,15 @@ public abstract class Topic310FindMinHeightTrees {
     static void dfs2(int u, int fa) {
         for (int i = he[u]; i != -1; i = ne[i]) {
             int j = e[i];
-            if (j == fa) continue;
-            if (p[u] != j) g[j] = Math.max(g[j], f1[u] + 1);
-            else g[j] = Math.max(g[j], f2[u] + 1);
+            if (j == fa) {
+                continue;
+            }
+            if (p[u] != j) {
+                g[j] = Math.max(g[j], f1[u] + 1);
+            }
+            else {
+                g[j] = Math.max(g[j], f2[u] + 1);
+            }
             g[j] = Math.max(g[j], g[u] + 1);
             dfs2(j, u);
         }
