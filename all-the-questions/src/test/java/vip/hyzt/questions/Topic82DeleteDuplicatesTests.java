@@ -15,8 +15,14 @@ public class Topic82DeleteDuplicatesTests {
                                                 new ListNode(3)))));
         ListNode res1 = topic82DeleteDuplicates.deleteDuplicates(head1);
         while (res1 != null) {
-            System.out.printf("%d\n", res1.val);
+            System.out.printf("%d", res1.val);
             res1 = res1.next;
+            if(res1 == null) {
+                System.out.print("\n");
+            }
+            else {
+                System.out.print(" → ");
+            }
         }
         ListNode node = topic82DeleteDuplicates.deleteDuplicates(null);
         System.out.printf("%s\n", node);
