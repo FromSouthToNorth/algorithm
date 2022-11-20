@@ -1,5 +1,6 @@
 package vip.hyzt.questions;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -50,9 +51,25 @@ public class Topic2474ClosestNodes {
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {
         TreeSet<Integer> set = new TreeSet<>(Set.of(-1));
         closestNodes(root, set);
-        return queries.stream().map(t ->
-                List.of(set.floor(t), set.ceiling(t) == null
-                        ? -1 : set.ceiling(t))).toList();
+//        return queries.stream().map(t ->
+//                List.of(set.floor(t), set.ceiling(t) == null
+//                        ? -1 : set.ceiling(t))).toList();
+        List<List<Integer>> res = new ArrayList<>();
+        for (int query : queries) {
+            Integer floor = set.floor(query);
+            if (floor == null) {
+                floor = -1;
+            }
+            Integer ceiling = set.ceiling(query);
+            if (floor == null) {
+                ceiling = -1;
+            }
+            ArrayList<Integer> list = new ArrayList<>();
+            list.add(floor);
+            list.add(ceiling);
+            res.add(list);
+        }
+        return res;
     }
 
     private void closestNodes(TreeNode root, TreeSet<Integer> set) {
