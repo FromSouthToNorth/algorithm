@@ -65,6 +65,7 @@ public class Topic2475MinimumFuelCost {
     private long result;
 
     public long minimumFuelCost(int[][] roads, int seats) {
+        result = 0;
         HashMap<Integer, List<Integer>> map = new HashMap<>();
         for (int[] road : roads) {
             map.computeIfAbsent(road[0], t -> new ArrayList<>()).add(road[1]);
