@@ -9,6 +9,7 @@ package vip.hyzt.questions;
  *     <li>每个子字符串长度都 <strong>至少</strong> 为 minLength 。</li>
  *     <li>每个子字符串的第一个字符都是一个 <strong>质数</strong> 数字，最后一个字符都是一个 <strong>非质数</strong> 数字。质数数字为 '2' ，'3' ，'5' 和 '7' ，剩下的都是非质数数字。</li>
  * </ul>
+ * <p>请你返回 s 的 <strong>完美</strong> 分割数目。由于答案可能很大，请返回答案对 10<sup>9</sup> + 7 <strong>取余</strong> 后的结果。</p>
  * <p>一个 <strong>子字符串</strong> 是字符串中一段连续字符串序列。</p>
  * <p></p>
  * <h2>示例 1：</h2>
