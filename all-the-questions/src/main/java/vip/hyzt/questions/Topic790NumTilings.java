@@ -23,7 +23,7 @@ package vip.hyzt.questions;
  *     <li>1 <= n <= 1000</li>
  * </ul>
  *
- * @author 力扣（LeetCode）
+     * @author 力扣（LeetCode）
  * @author hy
  * @see <a href="https://leetcode.cn/problems/domino-and-tromino-tiling/">https://leetcode.cn/problems/domino-and-tromino-tiling/</a>
  */
