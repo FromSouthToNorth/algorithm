@@ -39,18 +39,32 @@ package vip.hyzt.questions;
 public class Topic799ChampagneTower {
 
     public double champagneTower(int poured, int queryRow, int queryGlass) {
-        double[][] dp = new double[queryRow + 10][queryRow + 10];
-        dp[0][0] = poured;
-        for (int i = 0; i <= queryRow; i++) {
-            for (int j = 0; j <= i; j++) {
-                if (dp[i][j] <= 1) {
-                    continue;
+//        double[][] dp = new double[queryRow + 10][queryRow + 10];
+//        dp[0][0] = poured;
+//        for (int i = 0; i <= queryRow; i++) {
+//            for (int j = 0; j <= i; j++) {
+//                if (dp[i][j] <= 1) {
+//                    continue;
+//                }
+//                dp[i + 1][j] += (dp[i][j] - 1) / 2;
+//                dp[i + 1][j + 1] += (dp[i][j] - 1) / 2;
+//            }
+//        }
+//        return Math.min(1, dp[queryRow][queryGlass]);
+
+        double[] dp = new double[100];
+        dp[0] = poured;
+        for (int i = 0; i < queryRow; i++) {
+            for (int j = i; j >= 0; j--) {
+                double overflow = ((dp[j]) - 1.0) / 2;
+                dp[j] = 0;
+                if (overflow > 0) {
+                    dp[j] += overflow;
+                    dp[j + 1] += overflow;
                 }
-                dp[i + 1][j] += (dp[i][j] - 1) / 2;
-                dp[i + 1][j + 1] += (dp[i][j] - 1) / 2;
             }
         }
-        return Math.min(1, dp[queryRow][queryGlass]);
+        return Math.min(1, dp[queryGlass]);
     }
 
 }
