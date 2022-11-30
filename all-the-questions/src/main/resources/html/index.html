@@ -62,21 +62,41 @@
 </style>
 <body>
 <script>
-    const countSubarrays = function (nums, k) {
-        const map = new Map();
-        map.set(0, 1);
-        let i = 0, curr = 0, count;
-        for (; nums[i] !== k; i++) {
-            map.set(curr += nums[i] < k ? -1 : 1, map.has(curr) ? map.get(curr) + 1 : 0);
+    const insertionSort = function (arr) {
+        const {length} = arr;
+        for (let i = 0; i < length; i++) {
+            for (let j = i; j >= 0 && arr[j] > arr[j + 1]; j--) {
+                const t = arr[j];
+                console.log(arr[j]);
+                arr[j] = arr[j + 1];
+                arr[j + 1] = t;
+            }
         }
-        for (count = map.has(curr) ? map.get(curr) : 0 + map.has(curr - 1) ? map.get(curr) : 0; ++i < nums.length;) {
-            count += map.has(curr += nums[i] < k ? -1 : 1) ? map.get(curr += nums[i] < k ? -1 : 1) : 0 + map.has(curr - 1) ? map.get(curr - 1) : 0;
-        }
-        return count;
     }
+    const nums = ['a', 'c', 'b', 'c', 'a', 'b', 'd', 'f', 'e', 'j', 'h', 'a', 'b', 'a', 'b', 'c', 'g'];
+    // insertionSort(nums);
+    // console.log(nums);
 
-    console.log(countSubarrays([3, 2, 1, 4, 5], 4));
-    console.log(countSubarrays([2, 3, 1], 3));
+    const shellSort = function (arr) {
+        const {length} = arr;
+        let h = 1;
+        while (h < Math.floor(length / 3)) {
+            h = 3 * h + 1;
+        }
+        while (h >= 1) {
+            for (let i = h; i < length; i++) {
+                for (let j = i; j >= h &&  arr[j - h] > arr[j]; j -= h) {
+                    const t = arr[j];
+                    arr[j] = arr[j - h];
+                    arr[j - h] = t;
+                }
+            }
+            h = Math.floor(h / 3);
+        }
+    }
+    const arr = ['a', 'v', 'b', 'm', 'a', 'c', 'b'];
+    shellSort(arr);
+    console.log(arr);
 </script>
 </body>
 </html>
