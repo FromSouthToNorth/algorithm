@@ -42,6 +42,14 @@ package vip.hyzt.questions;
  *     - Leetcode 的最后一个字符和 is 的第一个字符 不 相等。
  *     这个句子 <strong>不</strong> 是回环句。
  * </pre>
+ * <p></p>
+ * <h2>提示：</h2>
+ * <ul>
+ *     <li>1 <= sentence.length <= 500</li>
+ *     <li>sentence 仅由大小写英文字母和空格组成</li>
+ *     <li>sentence 中的单词由单个空格进行分隔</li>
+ *     <li>不含任何前导或尾随空格</li>
+ * </ul>
  * @author 力扣（LeetCode）
  * @author hy
  * @see <a href="https://leetcode.cn/problems/circular-sentence/">https://leetcode.cn/problems/circular-sentence/</a>
