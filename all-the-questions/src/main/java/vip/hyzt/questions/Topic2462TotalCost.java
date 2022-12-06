@@ -60,8 +60,6 @@ public class Topic2462TotalCost {
         while (right.size() < candidates) {
             right.offer(j < i ? Integer.MAX_VALUE : costs[(int) j--]);
         }
-        System.out.printf("%s\n", left);
-        System.out.printf("%s\n", right);
         for (; k > 0; k--) {
             if (right.peek() < left.peek()) {
                 sum += right.poll();
