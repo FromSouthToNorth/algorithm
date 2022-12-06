@@ -7,7 +7,7 @@ package vip.hyzt.questions;
  * <p>返回修改后链表的头节点 head 。</p>
  * <p></p>
  * <h2>示例 1：</h2>
- * <img src="https://assets.leetcode.com/uploads/2022/10/02/drawio.png">
+ * <p>5 -> 2 -> (13) -> 3 -> (8)</p>
  * <pre>
  *     输入：head = [5,2,13,3,8]
  *     输出：[13,8]
