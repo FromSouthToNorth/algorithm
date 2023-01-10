@@ -48,7 +48,7 @@ public class Topic2530MaxKelements {
         long sum = 0;
         for (int i = 0; i < k; i++) {
             sum -= queue.peek();
-            // 向上取整 ceil(num / 3) = (num - 2) / 3
+            // 负数向上取整 ceil(num / 3) = (num - 2) / 3
             queue.offer((queue.poll() - 2) / 3);
         }
         return sum;
