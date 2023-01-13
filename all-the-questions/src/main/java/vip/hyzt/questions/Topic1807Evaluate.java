@@ -61,6 +61,7 @@ import java.util.List;
 public class Topic1807Evaluate {
 
     public String evaluate(String s, List<List<String>> knowledge) {
+
         HashMap<String, String> map = new HashMap<>();
         for (List<String> strings : knowledge) {
             map.put(strings.get(0), strings.get(1));
