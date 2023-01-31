@@ -40,9 +40,11 @@ public class Topic2319CheckXMatrix {
 
     public static boolean checkXMatrix (int[][] grid) {
 
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length; j++) {
-                if ((i == j || i == grid.length - i - j) ? grid[i][j] == 0 : grid[i][j] > 0) {
+        int n = grid.length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if ((i == j || i == n - 1 - j) ? grid[i][j] == 0 : grid[i][j] > 0) {
                     return false;
                 }
             }
