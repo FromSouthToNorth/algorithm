@@ -15,7 +15,7 @@ public class Topic2563CountFairPairs {
         Arrays.sort(nums);
         long count = 0;
         for (int i = 0, j = n - 1, k = n - 1; i < n; i++) {
-            for (; j >= 0 && nums[i] + nums[j] >= lower; j--){
+            for (; j >= 0 && nums[i] + nums[j] >= lower; j--) {
 
             }
             for (; k >= 0 && nums[i] + nums[k] > upper; k--) {
