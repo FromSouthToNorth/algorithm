@@ -1,7 +1,5 @@
 package vip.hyzt.questions;
 
-import java.util.Arrays;
-
 /**
  * <h1>6369. 左右元素和的差值</h1>
  *
