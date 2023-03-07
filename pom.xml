@@ -12,6 +12,7 @@
         <module>algorithms-fourth-edition</module>
         <module>datastructures</module>
         <module>bit-arithmetic</module>
+        <module>core-java-volume</module>
     </modules>
 
     <properties>
