@@ -16,22 +16,22 @@ public class TreeNode {
     /**
      * 节点值
      */
-    int val;
+    public int val;
 
     /**
      * 二叉树左节点
      */
-    TreeNode left;
+    public TreeNode left;
 
     /**
      * 二叉树右节点
      */
-    TreeNode right;
+    public TreeNode right;
 
     TreeNode() {
     }
 
-    TreeNode(int val) {
+    public TreeNode(int val) {
         this.val = val;
     }
 
