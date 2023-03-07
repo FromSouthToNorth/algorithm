@@ -1,6 +1,7 @@
 package vip.hyzt.questions;
 
 import org.junit.Test;
+import vip.hyzt.questions.wc316.Topic2446HaveConflict;
 
 public class Topic2446HaveConflictTests {
 
