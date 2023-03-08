@@ -1,6 +1,7 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc319;
 
 import org.junit.Test;
+import vip.hyzt.questions.wc319.Topic2470SubarrayLCM;
 
 public class Topic2470SubarrayLCMTests {
 

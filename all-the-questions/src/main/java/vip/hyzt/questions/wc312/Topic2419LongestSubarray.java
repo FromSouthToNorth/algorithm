@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc312;
 
 /**
  * <h2>6189. 按位与最大的最长子数组</h2>

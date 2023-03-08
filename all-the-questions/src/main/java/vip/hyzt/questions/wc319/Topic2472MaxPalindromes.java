@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc319;
 
 /**
  * <h1>2472. 不重叠回文子字符串的最大数目</h1>

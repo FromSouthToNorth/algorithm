@@ -1,6 +1,8 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc319;
 
 import org.junit.Test;
+import vip.hyzt.questions.TreeNode;
+import vip.hyzt.questions.wc319.Topic2471MinimumOperations;
 
 public class Topic2471MinimumOperationsTests {
 

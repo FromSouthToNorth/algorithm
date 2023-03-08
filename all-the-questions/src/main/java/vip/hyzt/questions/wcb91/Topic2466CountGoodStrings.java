@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wcb91;
 
 /**
  * <h1>2466. 统计构造好字符串的方案数</h1>

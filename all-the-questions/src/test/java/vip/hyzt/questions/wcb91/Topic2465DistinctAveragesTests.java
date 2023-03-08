@@ -1,6 +1,7 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wcb91;
 
 import org.junit.Test;
+import vip.hyzt.questions.wcb91.Topic2465DistinctAverages;
 
 public class Topic2465DistinctAveragesTests {
 

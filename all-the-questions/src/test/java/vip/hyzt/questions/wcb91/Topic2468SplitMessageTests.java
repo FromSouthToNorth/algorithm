@@ -1,8 +1,8 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wcb91;
 
 import org.junit.Test;
+import vip.hyzt.questions.wcb91.Topic2468SplitMessage;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Map;
 import java.util.TreeMap;
