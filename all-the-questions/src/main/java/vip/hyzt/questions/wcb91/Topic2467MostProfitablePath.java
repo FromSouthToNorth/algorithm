@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wcb91;
 
 import java.util.ArrayList;
 import java.util.HashMap;

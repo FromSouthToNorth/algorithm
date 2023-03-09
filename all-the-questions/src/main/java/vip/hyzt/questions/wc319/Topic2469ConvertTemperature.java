@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc319;
 
 /**
  * <h1>2469. 温度转换</h1>

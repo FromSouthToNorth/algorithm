@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wcb91;
 
 /**
  * <h1>2468. 根据限制分割消息</h1>

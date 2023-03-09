@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc319;
 
 import java.math.BigInteger;
 

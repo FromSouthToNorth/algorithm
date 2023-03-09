@@ -1,4 +1,6 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc319;
+
+import vip.hyzt.questions.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;
