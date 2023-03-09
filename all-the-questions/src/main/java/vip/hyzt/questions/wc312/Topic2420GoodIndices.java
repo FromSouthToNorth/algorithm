@@ -1,4 +1,4 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc312;
 
 import java.util.ArrayList;
 import java.util.List;

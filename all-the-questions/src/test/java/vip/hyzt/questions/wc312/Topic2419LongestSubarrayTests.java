@@ -1,6 +1,7 @@
-package vip.hyzt.questions;
+package vip.hyzt.questions.wc312;
 
 import org.junit.Test;
+import vip.hyzt.questions.wc312.Topic2419LongestSubarray;
 
 public class Topic2419LongestSubarrayTests {
 
